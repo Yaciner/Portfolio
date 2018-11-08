@@ -4,6 +4,8 @@ import 'velocity-animate/velocity.ui';
 import 'particles.js/particles';
 import Typed from 'typed.js';
 import {animateAbout} from '../../lib/animateElements';
+import * as d3 from "d3";
+import bodymovin from 'lottie-web';
 const particlesJS = window.particlesJS;
 let animationDone = false;
 
@@ -15,53 +17,34 @@ class About extends Component {
 
   componentDidMount() {
     document.querySelector(`.page-about`).classList.add(`animation-about`);
-    // this.animateText();
     this.startParticles();
-    // this.animateText();
     animateAbout();
     document.querySelector(`.scroll-mouse`).style.fill = `white`;
+    this.generateSkills();
   }
 
   startParticles () {
         particlesJS.load('particles-js', 'assets/data/particles.json', function() {
-        // console.log('callback - particles.js config loaded');
       });
   }
 
-  // animateText() {
-  //   new Typed('.about-header__text', {
-  //   strings: [`          I’m <span className="bold-colored">Yacine Redjala</span>,<br></br>
-  //             a devine <span className="bold-colored">student</span> enjoying<br></br>
-  //             everything related to web.`],
-  //   typeSpeed: 20,
-  //   backSpeed: 0,
-  //   smartBackspace: true,
-  //   fadeOut: true,
-  //   loop: true
-  // });
-  //  };
+  generateSkills() {
+    bodymovin.loadAnimation({
+       container: document.querySelector(`.development-skills`),
+       renderer: `svg`,
+       loop: false,
+       autoplay: true,
+       path: `../assets/data/developmentskills.json`
+     });
 
-
-  // animateText() {
-  //   new Typed('.about-animated__text', {
-  //     strings: [`Hi.`, `Nice to meet you.`, `Allow me to introduce myself.`],
-  //     typeSpeed: 30,
-  //     backSpeed: 0,
-  //     smartBackspace: true,
-  //     fadeOut: true,
-  //     loop: false,
-  //     backDelay: 1000
-  //   });
-  //   //
-  //   // if(animationDone === false) {
-  //   //   setInterval(() => {
-  //   //     window.scrollTo(0, window.innerHeight);
-  //   //     animationDone = true;
-  //   //   }, 7000)
-  //   // }
-  //
-  //   // window.scrollTo()
-  //  };
+     bodymovin.loadAnimation({
+        container: document.querySelector(`.design-skills`),
+        renderer: `svg`,
+        loop: false,
+        autoplay: true,
+        path: `../assets/data/designskills.json`
+      });
+  }
 
   render() {
     return (
@@ -83,16 +66,43 @@ class About extends Component {
           I’m <span className="bold-colored">Yacine Redjala</span>,
           a <span className="link-to-out"><Link to="https://www.devine.be">devine</Link></span> <span className="bold-colored">student</span> enjoying
           everything related to web and I'm enthusiastic about learning as much
-          as possible.<br></br><br></br>
+          as possible<span className="colored">.</span><br></br><br></br>
 
-          Currently a last year student and looking for a 3 month internship<span className="colored">.</span>
+          Currently a last year student and looking for a 3 month <span className="bold-colored">internship</span><span className="colored">.</span>
           </h1>
         </section>
         <div className="scroll-mouse__container">
           <img className="scroll-mouse" src='./assets/svg/mouse_debug.svg' alt="mouse" />
         </div>
         <section className="stuff-about-me">
+          <article className="about-education">
+            <header>My Education<span className="colored">.</span></header>
+            <p>I started off in Bruges studying <span className="bold-colored">Economics</span> for about 4 years, untill my 2 last years when
+            I did Accountancy there was some IT getting involved.<br></br><br></br>
 
+            We started learning some really basic html & css, that’s when I wanted to <span className="bold-colored">learn more
+            and more</span>.<br></br><br></br>
+
+            So after graduation I decided to go on to University and that’s when I started <span className="bold-colored">Devine</span>,
+            in Howest Kortrijk, which is really cool.
+
+            </p>
+          </article>
+          <article className="about-skills">
+          <header>My Skills<span className="colored">.</span></header>
+            <section className="about-skills__graphs">
+              <div className="development-skills">
+                <header className="skill-header">
+                  <h1>Development<span>.</span></h1>
+                </header>
+              </div>
+              <div className="design-skills">
+                <header className="skill-header">
+                  <h1>Design<span>.</span></h1>
+                </header>
+              </div>
+            </section>
+          </article>
         </section>
       </main>
       </div>

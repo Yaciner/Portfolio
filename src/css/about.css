@@ -49,10 +49,12 @@
 
 .bold-colored {
   border-bottom:solid  .5rem var(--color-blue);
+  padding-bottom: .2rem;
 }
 
 .colored {
   color: var(--color-blue);
+  font-size: 8rem;
 }
 
 .page-about__overlay {
@@ -75,7 +77,6 @@
 
 .about-header__text {
   width: 60vw;
-  line-height: 140%;
   align-self: center;
 }
 
@@ -83,6 +84,68 @@
   background-color: white;
   text-decoration: none;
   color: black;
+}
+
+.about-education {
+  padding-top: 8rem;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.about-education header {
+  font-family: 'PlayfairDisplay Bold';
+  font-size: 6rem;
+  padding: 3rem 0;
+}
+
+.about-skills > header {
+  text-align: center;
+  font-family: 'PlayfairDisplay Bold';
+  font-size: 6rem;
+  padding: 3rem 0;
+}
+
+.about-education p {
+  width: 70%;
+  font-family: 'Roboto Light';
+  font-size: 2.2rem;
+}
+
+.about-education p .bold-colored {
+    border-bottom:solid  .3rem var(--color-blue);
+}
+
+.about-skills {
+  padding-top: 10rem;
+  width: 100vw;
+}
+
+.about-skills__graphs {
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.development-skills {
+  width: 70rem;
+}
+
+.design-skills {
+  width: 70rem;
+}
+
+.skill-header {
+  font-size: 3rem;
+  margin-top: 4rem;
+  font-family: 'PlayfairDisplay Bold';
+}
+
+.skill-header span {
+  color: var(--color-blue);
+  font-size: 4rem;
 }
 
 @-webkit-keyframes MOVE-BG {

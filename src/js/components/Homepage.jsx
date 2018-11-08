@@ -13,7 +13,6 @@ class Homepage extends Component {
 
 componentDidMount() {
   // Mouse();
-  document.querySelector(`.circle-mouse`).style.fill = `white`;
   document.querySelector(`.page-controls__work_text`).addEventListener(`mouseenter`, this.handleMouseEnter);
   document.querySelector(`.page-controls__work_text`).addEventListener(`mouseleave`, this.handleMouseOut);
   document.querySelector(`.page-controls__about_text`).addEventListener(`mouseenter`, this.handleMouseEnter);
@@ -76,8 +75,6 @@ isMobileDevice() {
         </nav>
       </header>
       <main>
-      <svg className="circle-mouse">
-      </svg>
         <section className="page-home active" id="page-home">
           <div className="page-controls">
             <div className="page-controls__empty">
@@ -100,7 +97,6 @@ isMobileDevice() {
           <br></br>
             <span className="page-home__subtitle">My name is Yacine Redjala.</span>
           </h1>
-          <div className="anim"></div>
         </section>
       </main>
       </div>

@@ -39,13 +39,6 @@
   font-size: 4rem;
 }
 
-.anim {
-  width: 40%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-
 .page-controls {
   color: var(--color-white);
   font-family: 'Roboto Light';
