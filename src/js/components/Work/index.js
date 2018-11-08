@@ -27,28 +27,6 @@ class Work extends Component {
     if (timeOut) clearTimeout(timeOut);
   }
 
-  // handleMouseEnter() {
-  //   console.log('in');
-  //   let $circle = document.querySelector(`.circle-mouse`);
-  //
-  //   Velocity($circle, {marginTop: `30px`} , {loop:  true}, {easing: `ease-out`});
-  //   $circle.style.fill = 'white';
-  //   $circle.style.stroke = '#3d72a4';
-  //   $circle.style.strokeWidth = 3;
-  // }
-
-  // handleMouseOut() {
-  //   let $circle = document.querySelector(`.circle-mouse`);
-  //   // let resetvalue = $circle.style.transform.match(/\d+/g).map(Number);
-  //   Velocity($circle, `stop`);
-  //   $circle.style.fill = 'black';
-  //   $circle.style.stroke = 'none';
-  //   $circle.style.strokeWidth = `none`;
-  //   $circle.style.marginTop = null;
-  //   // console.log()
-  //   // $circle.style.transform = `translateY(-${resetvalue[0] + '.' + resetvalue[1]}px);`
-  // }
-
   componentDidMount() {
     // document.querySelector(`.circle-mouse`).style.fill = `black`;
     document.querySelector(`.work-frame__button`).addEventListener(`mouseenter`, this.handleMouseEnter);

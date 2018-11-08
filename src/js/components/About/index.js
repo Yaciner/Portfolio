@@ -79,10 +79,8 @@ class About extends Component {
             <header>My Education<span className="colored">.</span></header>
             <p>I started off in Bruges studying <span className="bold-colored">Economics</span> for about 4 years, untill my 2 last years when
             I did Accountancy there was some IT getting involved.<br></br><br></br>
-
             We started learning some really basic html & css, that’s when I wanted to <span className="bold-colored">learn more
             and more</span>.<br></br><br></br>
-
             So after graduation I decided to go on to University and that’s when I started <span className="bold-colored">Devine</span>,
             in Howest Kortrijk, which is really cool.
 
