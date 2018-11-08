@@ -42,39 +42,54 @@
   background-position: right bottom;
   background-attachment: fixed; */
   animation-name: MOVE-BG;
-  animation-duration: .6s;
+  animation-duration: 1s;
   animation-timing-function:  ease-in-out;
   animation-fill-mode: forwards;
 }
 
 .bold-colored {
+  border-bottom:solid  .5rem var(--color-blue);
+}
+
+.colored {
   color: var(--color-blue);
 }
 
 .page-about__overlay {
-  width: 50vw;
+  width: 100vw;
   height: 100vh;
   margin: 0 auto;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   position: absolute;
-  flex-direction: column;
-  align-self: flex-end;
+  flex-direction: row;
+  align-self: center;
   top: 0;
   color: white;
-  font-size: 4rem;
+  font-size: 5rem;
+  text-align: left;
+  letter-spacing: .3rem;
+  font-family: 'Roboto Light';
+  z-index: 100;
 }
 
 .about-header__text {
-  padding: 15%;
-  line-height: 150%;
+  width: 60vw;
+  line-height: 140%;
+  align-self: center;
+}
+
+.link-to-out:hover {
+  background-color: white;
+  text-decoration: none;
+  color: black;
 }
 
 @-webkit-keyframes MOVE-BG {
 	from {
-		-webkit-transform: translateX(0);
+    opacity: 1;
 	}
 	to {
-		-webkit-transform: translateX(-29vw);
+    opacity: 0;
 	}
 }

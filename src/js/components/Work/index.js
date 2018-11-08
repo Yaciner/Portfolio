@@ -240,7 +240,7 @@ class Work extends Component {
               <div className="content-info">
                 <div className="content-info__role">
                   <p className="content-info__title">
-                    Role
+                    What
                   </p>
                   <p className="content-info__body">
                     {
@@ -250,7 +250,7 @@ class Work extends Component {
                 </div>
                 <div className="content-info__agency">
                   <p className="content-info__title">
-                    Agency
+                    For who
                   </p>
                   <p className="content-info__body">
                     {
@@ -260,7 +260,7 @@ class Work extends Component {
                 </div>
                   <div className="content-info__year">
                     <p className="content-info__title">
-                      Year
+                      When
                     </p>
                     <p className="content-info__body">
                       {
@@ -286,7 +286,7 @@ class Work extends Component {
               </div>
               <div className="work-frame__button">
                 <p className="work-frame__button-p">
-                  <Link to={`/workdetail/${this.state.case}`}>view case</Link>
+                  <Link to={`/workdetail/${this.state.case}`}>Check it out</Link>
                   {/* <Link to={'/ideas/'+this.props.testvalue }>Create Idea</Link>
                   {`/request/${_id}`} */}
                 </p>

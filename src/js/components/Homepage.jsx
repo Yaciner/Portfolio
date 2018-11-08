@@ -96,7 +96,7 @@ isMobileDevice() {
           </div>
 
           <h1 className="page-home__title">
-          I'm a digital Designer and Developer
+          I'm a digital designer and developer<span className="colored">.</span>
           <br></br>
             <span className="page-home__subtitle">My name is Yacine Redjala.</span>
           </h1>

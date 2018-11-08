@@ -10,6 +10,11 @@ export function workPage() {
       Anims($slidesRightImage, `transition.slideRightIn`, 1200, 300, "ease-out");
 };
 
+export function animateAbout() {
+      const $slidesUpTitle = document.querySelector(`.about-header__text`);
+      Anims($slidesUpTitle, `transition.slideUpIn`, 2000, 6000, "ease-out");
+};
+
   // const $slidesLeft = document.querySelectorAll(`.dreaming__article-left, .dimension__article-left, .memory__article-left`);
   // const $slidesRight = document.querySelectorAll(`.dreaming__article-bottom, .subscribe__article`);
   // const $flipsIn = document.querySelectorAll(`.dreaming__article-right, .dimension__article-image`);

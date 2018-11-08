@@ -14,20 +14,19 @@
 }
 
 .page-home__title {
-  font-family: 'PlayfairDisplay Regular';
+  font-family: 'PlayfairDisplay Bold';
   color: var(--color-white);
   text-align: left;
-  font-size: 3.4rem;
+  font-size: 4.5rem;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-80%, -50%);
-  text-transform: uppercase;
   line-height: 110%;
 }
 
 .page-home__subtitle {
-  font-size: 2rem;
+  font-size: 3rem;
   color: var(--color-gray);
   font-family: 'Roboto Light';
 }

@@ -29,6 +29,7 @@ export default class WorkDetail extends Component {
           this.setState({
             project: results
           });
+          document.querySelector(`.name`).style.color = '#3B3B3B';
         }).catch((e => this.setState({ error: e })));
         return
     }

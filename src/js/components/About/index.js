@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import 'velocity-animate/velocity.ui';
 import 'particles.js/particles';
 import Typed from 'typed.js';
+import {animateAbout} from '../../lib/animateElements';
 const particlesJS = window.particlesJS;
 let animationDone = false;
 
@@ -16,14 +17,30 @@ class About extends Component {
     document.querySelector(`.page-about`).classList.add(`animation-about`);
     // this.animateText();
     this.startParticles();
+    // this.animateText();
+    animateAbout();
     document.querySelector(`.scroll-mouse`).style.fill = `white`;
   }
 
   startParticles () {
         particlesJS.load('particles-js', 'assets/data/particles.json', function() {
-        console.log('callback - particles.js config loaded');
+        // console.log('callback - particles.js config loaded');
       });
   }
+
+  // animateText() {
+  //   new Typed('.about-header__text', {
+  //   strings: [`          I’m <span className="bold-colored">Yacine Redjala</span>,<br></br>
+  //             a devine <span className="bold-colored">student</span> enjoying<br></br>
+  //             everything related to web.`],
+  //   typeSpeed: 20,
+  //   backSpeed: 0,
+  //   smartBackspace: true,
+  //   fadeOut: true,
+  //   loop: true
+  // });
+  //  };
+
 
   // animateText() {
   //   new Typed('.about-animated__text', {
@@ -63,9 +80,12 @@ class About extends Component {
         </section>
         <section className="page-about__overlay">
           <h1 className="about-header__text">
-          I’m <span className="bold-colored">Yacine Redjala</span>,<br></br>
-          a devine <span className="bold-colored">student</span> enjoying<br></br>
-          everything related to web.
+          I’m <span className="bold-colored">Yacine Redjala</span>,
+          a <span className="link-to-out"><Link to="https://www.devine.be">devine</Link></span> <span className="bold-colored">student</span> enjoying
+          everything related to web and I'm enthusiastic about learning as much
+          as possible.<br></br><br></br>
+
+          Currently a last year student and looking for a 3 month internship<span className="colored">.</span>
           </h1>
         </section>
         <div className="scroll-mouse__container">
