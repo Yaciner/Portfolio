@@ -3,7 +3,7 @@
 }
 
 .page-about {
-  width: 100vw;
+  width: 98vw;
   height: 100vh;
   background-color: var(--color-black);
   background-image: url(../assets/img/me_smaller.png);
@@ -27,7 +27,7 @@
 }
 
 .stuff-about-me {
-  width: 100vw;
+  width: 98vw;
   height: 100vh;
   background-color: white;
 }
@@ -50,7 +50,7 @@
 }
 
 .page-about__overlay {
-  width: 100vw;
+  width: 98vw;
   height: 100vh;
   margin: 0 auto;
   display: flex;
@@ -126,7 +126,7 @@
 }
 
 .design-skills {
-  width: 70rem;
+  width: 65rem;
 }
 
 .skill-header {

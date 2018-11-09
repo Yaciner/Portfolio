@@ -386,7 +386,8 @@
 .project-screens__image {
   width: 54.86rem;
   height: 34.29rem;
-  padding: 2rem;
+  margin: 2rem;
+   box-shadow: 2px 2px 2px 2px #f2f2f2;
 }
 
 .scroll-mouse__container {

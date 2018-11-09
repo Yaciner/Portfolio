@@ -3,6 +3,7 @@ import 'velocity-animate/velocity.ui';
 // let myopacity = 0;
 
 const Anim = ($el, animString, offsetMore, delay) => {
+
   addHideClass($el);
   // animationOut($el, animString, offsetMore, delay);
   // setInterval(()=> {

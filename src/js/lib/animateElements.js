@@ -1,4 +1,5 @@
 import Anims from './Animations';
+import AnimsOnScroll from './AnimationsOnScroll';
 
 export function workPage() {
       const $slidesUpTitle = document.querySelector(`.content-title`);
@@ -13,6 +14,13 @@ export function workPage() {
 export function animateAbout() {
       const $slidesUpTitle = document.querySelector(`.about-header__text`);
       Anims($slidesUpTitle, `transition.slideUpIn`, 2000, 6000, "ease-out");
+};
+
+export function animateDetail() {
+      const $slidesUpAbout = document.querySelectorAll(`.target-title, .target-info, .project-screens__image, .ProximaNovabold, .project-fonts__name, .ProximaNovaregular, .project-fonts__name, .project-fonts__example`);
+      $slidesUpAbout.forEach(elem => {
+        AnimsOnScroll(elem, `transition.slideUpIn`, 1000);
+    });
 };
 
   // const $slidesLeft = document.querySelectorAll(`.dreaming__article-left, .dimension__article-left, .memory__article-left`);

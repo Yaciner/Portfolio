@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
+import {animateDetail} from '../lib/animateElements';
 // import bodymovin from 'lottie-web';
 // import Velocity from 'velocity-animate';
 // import 'velocity-animate/velocity.ui';
@@ -25,10 +26,10 @@ export default class WorkDetail extends Component {
       })
         .then(response => response.json())
         .then(results => {
-
           this.setState({
             project: results
           });
+          animateDetail();
           document.querySelector(`.name`).style.color = '#3B3B3B';
         }).catch((e => this.setState({ error: e })));
         return
