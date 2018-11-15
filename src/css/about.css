@@ -41,12 +41,10 @@
 
 .bold-colored {
   border-bottom:solid  .5rem var(--color-blue);
-  padding-bottom: .2rem;
 }
 
 .colored {
   color: var(--color-blue);
-  font-size: 8rem;
 }
 
 .page-about__overlay {
@@ -60,9 +58,8 @@
   align-self: center;
   top: 0;
   color: white;
-  font-size: 5rem;
+  font-size: 3.8rem;
   text-align: left;
-  letter-spacing: .3rem;
   font-family: 'Roboto Light';
   z-index: 100;
 }
@@ -86,14 +83,14 @@
 
 .about-education header {
   font-family: 'PlayfairDisplay Bold';
-  font-size: 6rem;
+  font-size: 3.3rem;
   padding: 3rem 0;
 }
 
 .about-skills > header {
   text-align: center;
   font-family: 'PlayfairDisplay Bold';
-  font-size: 6rem;
+  font-size: 3.3rem;
   padding: 3rem 0;
 }
 
@@ -101,10 +98,15 @@
   width: 70%;
   font-family: 'Roboto Light';
   font-size: 2.2rem;
+  line-height: 150%;
 }
 
 .about-education p .bold-colored {
     border-bottom:solid  .3rem var(--color-blue);
+}
+
+.about-header__text {
+  line-height: 150%;
 }
 
 .about-skills {

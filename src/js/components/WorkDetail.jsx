@@ -95,9 +95,12 @@ export default class WorkDetail extends Component {
   }
 
   thereIsProject(project, _id) {
+    let next = parseInt(_id) + 1;
+    console.log(_id);
+    console.log(next);
     if(project.length - 1 > _id) {
       return (<section className="project-next">
-        <Link to={"/workdetail/" + parseInt(_id + 1, 10)}>
+        <Link to={"/workdetail/" + next}>
         <p className="project-next__p">
           Next Project
         </p>
@@ -125,11 +128,11 @@ export default class WorkDetail extends Component {
       <div className="detail">
       <div><p className="status"></p></div>
       <header>
-        <nav>
-          <div className="name">
-            <span>Yacine.</span>
-          </div>
-        </nav>
+      <nav>
+        <div className="name">
+          <span><Link to='/'>Yacine.</Link></span>
+        </div>
+      </nav>
       </header>
       <main>
         <section className="page-work" id="page-work">

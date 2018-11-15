@@ -40,6 +40,18 @@
   .work-frame__indicator-p {
     font-size: 3.5rem;
   }
+
+  .page-home {
+    background-size: 60rem;
+  }
+
+  .content-summary__text {
+    font-size: 1.8rem;
+  }
+
+  .content-title {
+    font-size: 6rem;
+  }
 }
 
 @media (width <= 750px) {
@@ -68,6 +80,18 @@
   .slash {
     width: 3rem;
   }
+
+  .page-home {
+    background-size: 40rem;
+    background-position: center;
+  }
+
+  .page-home__title {
+    text-align: center;
+    left: 0;
+    transform: none;
+    top: 60%;
+  }
 }
 
 
@@ -83,8 +107,128 @@
     padding-top: 4rem;
     margin: 0 auto;
   }
+
+  .particles {
+    visibility: hidden;
+  }
 }
 
+@media (width <= 480px) {
+  .page-home__title {
+    font-size: 3rem;
+    top: 70%;
+  }
+
+  .page-home__subtitle {
+    font-size: 2rem;
+  }
+
+  .colored {
+    font-size: 4rem;
+  }
+}
+
+@media (width <= 380px) {
+  .name {
+    font-size: 1.6rem;
+    padding: 1.5rem;
+  }
+
+  .content-title {
+    font-size: 5rem;
+  }
+
+  .drawline svg {
+    height: 2rem !important;
+  }
+
+  .content-summary {
+    margin-top: .4rem;
+    padding-top: .4rem;
+    width: 24rem;
+  }
+
+  .content_header__right {
+    display: none;
+  }
+
+  .content-info__title {
+    font-size: 1.6rem;
+    padding: .3rem 0;
+  }
+
+  .content-info__body {
+    font-size: 1.3rem;
+  }
+
+  .content-info div {
+    padding-top: 1rem;
+    margin-right: 2rem;
+  }
+
+  .content-info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    padding-top: 0;
+    margin-top: -1rem;
+    height: 30%;
+  }
+
+  .work-frame__indicator {
+    left: 0;
+    margin-top: 4.5rem;
+    justify-content: flex-start;
+    width: 22rem;
+    height: 5rem;
+  }
+
+  .content-info__role p {
+    text-align: left;
+  }
+
+  .content-info__agency p {
+    text-align: left;
+  }
+
+  .content-info__year p {
+    text-align: left;
+  }
+
+  .content-summary__text {
+    font-size: 1.4rem;
+    line-height: 150%;
+  }
+
+  .page-home__title {
+    font-size: 2.6rem;
+    top: 65%;
+    padding: 0 1rem;
+  }
+
+  .page-home {
+    background-size: 30rem;
+    background-position-y: 25%;
+  }
+
+  .page-home__subtitle {
+    font-size: 1.8rem;
+  }
+
+  .colored {
+    font-size: 3rem;
+  }
+
+  .page-controls__about_text a {
+    padding: .6rem;
+    font-size: 1.6rem;
+  }
+
+  .page-controls__work_text a {
+    padding: .6rem;
+    font-size: 1.6rem;
+  }
+}
 
 /* EVERYTHING IN HEIGHT */
 

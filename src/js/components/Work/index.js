@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import {workPage} from '../../lib/animateElements';
 import bodymovin from 'lottie-web';
+// import Hammer from 'hammerjs';
 // import Velocity from 'velocity-animate';
 // import 'velocity-animate/velocity.ui';
 // import Mouse from '../../lib/mouse';
@@ -59,6 +60,41 @@ class Work extends Component {
      //    autoplay: true,
      //    path: `../assets/data/circles.json`
      //  });
+    // let $container = document.querySelector('.work-frame');
+    //
+    // // Create a manager to manager the element
+    // let manager = new Hammer.Manager($container);
+    //
+    // // Create a recognizer
+    // let Swipe = new Hammer.Swipe();
+    //
+    // // Add the recognizer to the manager
+    // manager.add(Swipe);
+    // // Declare global variables to swiped correct distance
+    // let deltaX = 0;
+    // let deltaY = 0;
+    //
+    // manager.on('swipe', function(e) {
+    //   deltaX = deltaX + e.deltaX;
+    //   let direction = e.offsetDirection;
+    //   if(direction === 8) {
+    //     if (this.state.case !== this.state.data.length) {
+    //       if (this.state.case + 1 <= this.state.data.length - 1) {
+    //         this.setState({ case: this.state.case + 1 });
+    //         workPage();
+    //       }
+    //     }
+    //   }
+    //
+    //   if(direction === 16) {
+    //     if (this.state.case - 1 >= 0) {
+    //       this.setState({case: this.state.case - 1});
+    //       workPage();
+    //     }
+    //   }
+    // });
+
+
     document.querySelector(`.name`).style.color = '#3B3B3B';
     document.addEventListener("wheel", this.scrollEvent, {passive: true}),
     document.addEventListener("mousewheel", this.scrollEvent, {passive: true}),

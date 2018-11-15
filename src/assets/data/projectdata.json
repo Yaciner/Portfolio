@@ -41,5 +41,26 @@
     "site": "http://student.howest.be/yacine.redjala/20172018/ma4/vertigo/",
     "screens": 5,
     "responsive": false
+  },
+  {
+    "name": "WePlant",
+    "role": "Mobile Design & UX",
+    "agency": "Devine (Agentschap natuur en bos)",
+    "summary": "With the WePlant app I want to motivate people to learn more about nature. Instead of just walking by they can learn something of a rare plant they cross eventually.",
+    "year": "2017",
+    "maintitle": "Nature always wears the color of the spirits.",
+    "skills": "Mobile / Responsive / ux",
+    "target": {
+        "one": "The aim of the project was to get people to learn more about the environment on a simplified way. And to also teach them how to plant themselves.",
+        "two": "People can detect which plants or trees are nearby with the map and see how rare it is. They can also add new plants by using the plant recognition tool in the app."
+      },
+    "fonts": {
+      "name": ["Rockwell", "Futura"],
+      "heading": "Rockwell - Bold",
+      "body": "Futura - Regular"
+    },
+    "site": "http://student.howest.be/yacine.redjala/20172018/ma4/vertigo/",
+    "screens": 5,
+    "responsive": false
   }
 ]
