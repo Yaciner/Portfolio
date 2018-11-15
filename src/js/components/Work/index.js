@@ -190,7 +190,7 @@ class Work extends Component {
   // }
 
   renderHeaderImage(project) {
-    return (<img className="content-summary__image-style" src={`./assets/img/${project[this.state.case].name}.png`} alt="Vertigo" />)
+    return (<img className={`content-summary__image-style ${project[this.state.case].mobile ? new String("mobile") : null}`} src={`./assets/img/${project[this.state.case].name}.png`} alt="Vertigo" />)
   }
 
   render() {

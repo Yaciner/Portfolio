@@ -444,3 +444,8 @@
   font-size: 2rem;
   padding-bottom: 5rem;
 }
+
+.mobile {
+  padding-top: .1rem;
+  width: 50rem !important;
+}

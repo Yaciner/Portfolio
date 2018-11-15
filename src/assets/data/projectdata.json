@@ -18,6 +18,7 @@
     },
     "site": "http://student.howest.be/yacine.redjala/20172018/ma4/vertigo/",
     "screens": 10,
+    "mobile": false,
     "responsive": true,
     "responsiveinfo": "Part of the assignment was to make sure, it was responsive. We used mediaqueries in order to do so."
   },
@@ -40,6 +41,7 @@
     },
     "site": "http://student.howest.be/yacine.redjala/20172018/ma4/vertigo/",
     "screens": 5,
+    "mobile": false,
     "responsive": false
   },
   {
@@ -61,6 +63,7 @@
     },
     "site": "http://student.howest.be/yacine.redjala/20172018/ma4/vertigo/",
     "screens": 5,
+    "mobile": true,
     "responsive": false
   }
 ]
