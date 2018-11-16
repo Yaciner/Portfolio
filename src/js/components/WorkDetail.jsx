@@ -14,9 +14,6 @@ export default class WorkDetail extends Component {
   }
 
   componentDidMount() {
-
-    // document.addEventListener(`mousemove`, buildMouse);
-
     if (!this.state.project) {
       fetch('./assets/data/projectdata.json', {
         headers : {
@@ -165,7 +162,7 @@ export default class WorkDetail extends Component {
               </div>
               <div className="content_header__right">
                 <div className="content-summary__image">
-                 <img className="content-summary__image-style" src={`./assets/img/${project ? project[_id].name : null}.png`} alt="Vertigo" />
+                 <img className={`content-summary__image-style ${project[_id].mobile ? new String("mobile") : null}`} src={`./assets/img/${project ? project[_id].name : null}.png`} alt="Vertigo" />
                </div>
               </div>
             </section>

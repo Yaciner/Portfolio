@@ -4,6 +4,7 @@ import Home from '../components/Homepage';
 import Work from '../components/Work';
 import About from '../components/About';
 import Detail from '../components/WorkDetail';
+import More from '../components/OtherProjects';
 
 class App extends Component {
 
@@ -27,6 +28,7 @@ class App extends Component {
           <Route exact path='/' render={this.renderHome} />
           <Route exact path='/work' component={Work} />
           <Route exact path='/about' component={About} />
+          <Route exact path='/moreprojects' component={More} />
           <Route exact path='/workdetail/:_id' render={this.renderDetailMetId} />
           <Route render={() => <Redirect to='/' />} />
         </Switch>

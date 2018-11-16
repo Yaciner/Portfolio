@@ -15,6 +15,7 @@ let delta = 0;
 // let quotient = -1;
 // let navigationActive = false;
 let timeOut = null;
+let clickState = 0;
 
 class Work extends Component {
   state = {
@@ -28,10 +29,25 @@ class Work extends Component {
     if (timeOut) clearTimeout(timeOut);
   }
 
+  toggleElement() {
+    if (clickState == 0) {
+        // code snippet 1
+        clickState = 1;
+        document.querySelector('.menu-overlay').classList.add('open');
+    }
+
+    else {
+      // code snippet 2
+      clickState = 0;
+      document.querySelector('.menu-overlay').classList.remove('open');
+    }
+  }
+
   componentDidMount() {
     // document.querySelector(`.circle-mouse`).style.fill = `black`;
     document.querySelector(`.work-frame__button`).addEventListener(`mouseenter`, this.handleMouseEnter);
     document.querySelector(`.work-frame__button`).addEventListener(`mouseleave`, this.handleMouseOut);
+    document.querySelector(`.work-frame__indicator`).addEventListener(`click`, this.toggleElement);
     // Mouse();
 
     fetch('./assets/data/projectdata.json', {
@@ -210,18 +226,18 @@ class Work extends Component {
           </nav>
         </header>
         <main>
-        <div className="overlay" >
+        <div className="menu-overlay" >
           <nav className="overlay-menu">
             <ul>
-              <li ><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Work</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><Link to='/workdetail/0'>Vertigo</Link></li>
+              <li><Link to='/workdetail/1'>Babeleir</Link></li>
+              <li><Link to='/workdetail/2'>WePlant</Link></li>
+              <li><Link to='/moreprojects'>More projects</Link></li>
             </ul>
           </nav>
         </div>
-          <section className="page-work" id="page-work">
 
+          <section className="page-work" id="page-work">
             <section className="page-work__content">
               <section className="content_header">
                 <div className="content_header__left">
