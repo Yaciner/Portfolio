@@ -70,7 +70,7 @@ export default class OtherProjects extends Component {
                 <header>
                 <h1>Just a random charachter I made and animated.</h1>
                 </header>
-                  <video id="video" autoPlay loop>
+                  <video id="video" autoPlay loop muted>
                      <source src="./assets/video/charachter.mp4" type="video/mp4" media="all and (max-width:480px)" />
                   </video>
                 </section>
@@ -78,7 +78,7 @@ export default class OtherProjects extends Component {
                 <header>
                   <h1>This was a concept explanation video I made with a voice over I recorded.</h1>
                 </header>
-                  <video id="video" autoPlay loop>
+                  <video id="video" autoPlay loop muted>
                      <source src="./assets/video/wow.mp4" type="video/mp4" media="all and (max-width:480px)" />
                   </video>
                 </section>
@@ -86,7 +86,7 @@ export default class OtherProjects extends Component {
                 <header>
                   <h1>Here we had to make an introduction video that was easy to use for other people that wanted to make a video for De Warmste Week 2018.</h1>
                 </header>
-                  <video id="video" autoPlay loop>
+                  <video id="video" autoPlay loop muted>
                      <source src="./assets/video/warmsteweek.mp4" type="video/mp4" media="all and (max-width:480px)" />
                   </video>
                 </section>
@@ -94,7 +94,7 @@ export default class OtherProjects extends Component {
                 <header>
                   <h1>This is an appstore preview for the app WePlant I made.</h1>
                 </header>
-                  <video id="video" autoPlay loop>
+                  <video id="video" autoPlay loop muted>
                      <source src="./assets/video/WePlant.mp4" type="video/mp4" media="all and (max-width:480px)" />
                   </video>
                 </section>
@@ -102,7 +102,7 @@ export default class OtherProjects extends Component {
                 <header>
                   <h1>Another appstore preview I made for my app called Mornings.</h1>
                 </header>
-                  <video id="video" autoPlay loop>
+                  <video id="video" autoPlay loop muted>
                      <source src="./assets/video/Hi.mp4" type="video/mp4" media="all and (max-width:480px)" />
                   </video>
                 </section>
@@ -110,7 +110,7 @@ export default class OtherProjects extends Component {
                 <header>
                   <h1>This was an animation I made to be used as background for the site I made for Vertigo.</h1>
                 </header>
-                  <video id="video" autoPlay loop>
+                  <video id="video" autoPlay loop muted>
                      <source src="./assets/video/vertigo.mp4" type="video/mp4" media="all and (max-width:480px)" />
                   </video>
                 </section>
@@ -118,7 +118,7 @@ export default class OtherProjects extends Component {
                 <header>
                   <h1>A little random Google Doodle.</h1>
                 </header>
-                  <video id="video" autoPlay loop>
+                  <video id="video" autoPlay loop muted>
                      <source src="./assets/video/doodle.mp4" type="video/mp4" media="all and (max-width:480px)" />
                   </video>
                 </section>
