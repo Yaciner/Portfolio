@@ -1,0 +1,27 @@
+.section-other {
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap
+}
+
+.other-element {
+  padding: 10rem 0;
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.other-element header {
+  width: 50%;
+  font-size: 2.4rem;
+  font-family: 'Roboto Light';
+}
+
+.other-element video {
+  width: 50rem;
+}

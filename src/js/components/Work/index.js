@@ -34,6 +34,14 @@ class Work extends Component {
         // code snippet 1
         clickState = 1;
         document.querySelector('.menu-overlay').classList.add('open');
+        document.addEventListener('keydown', (event) => {
+          const keyName = event.key;
+          if(keyName==='Escape'){
+            clickState = 0;
+            document.querySelector('.menu-overlay').classList.remove('open');
+
+          }
+        })
     }
 
     else {
@@ -49,6 +57,7 @@ class Work extends Component {
     document.querySelector(`.work-frame__button`).addEventListener(`mouseleave`, this.handleMouseOut);
     document.querySelector(`.work-frame__indicator`).addEventListener(`click`, this.toggleElement);
     // Mouse();
+    this.generateLister();
 
     fetch('./assets/data/projectdata.json', {
       headers : {
@@ -110,7 +119,6 @@ class Work extends Component {
     //   }
     // });
 
-
     document.querySelector(`.name`).style.color = '#3B3B3B';
     document.addEventListener("wheel", this.scrollEvent, {passive: true}),
     document.addEventListener("mousewheel", this.scrollEvent, {passive: true}),
@@ -152,9 +160,8 @@ class Work extends Component {
     }
   }
 
-  scrollEvent = e => {
-    console.log("scrollEvent");
 
+  scrollEvent = e => {
     let { scrolled } = this.state;
 
     if ("wheel" === e.type) supportsWheel = !0;
@@ -184,6 +191,12 @@ class Work extends Component {
     }
   }
 
+  generateLister() {
+    const leftFrame = document.querySelector(`.work-frame`).getBoundingClientRect().left;
+    document.body.addEventListener('onresize', this.generateLister);
+    document.querySelector(`.work-frame__indicator`).style.left = 1000;
+    console.log(document.querySelector(`.work-frame__indicator`).style.left);
+  }
 
 	checkStatus = (response) => {
 		if (!response.ok) throw Error(response.statusText);
