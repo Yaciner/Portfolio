@@ -95,6 +95,13 @@ class About extends Component {
               </div>
             </section>
           </article>
+
+          <article className="about-contact">
+          <header>Let's get in touch<span className="colored">.</span></header>
+            <section className="about-forms">
+              <a href="mailto:redjalay@gmail.com" target="_top">Mail</a>
+            </section>
+          </article>
         </section>
       </main>
       </div>

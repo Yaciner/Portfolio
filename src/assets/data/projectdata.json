@@ -12,9 +12,9 @@
         "two": "This is a storytelling one pager, with chosen movies we figured would fit for this assignment."
       },
     "fonts": {
-      "name": ["ProximaNova Regular", "ProximaNova Bold"],
-      "heading": "ProximaNova Bold",
-      "body": "ProximaNova Regular"
+      "name": ["ProximaNova-Bold", "ProximaNova-Regular"],
+      "heading": "ProximaNova - Bold",
+      "body": "ProximaNova - Regular"
     },
     "site": "http://student.howest.be/yacine.redjala/20172018/ma4/vertigo/",
     "screens": 10,
@@ -35,9 +35,9 @@
         "two": "The twist is that you really have to be under water when you take the picture, and the most creative picture wins a couple of tickets for him/her and his/her mates to go on a boat and do scubadiving."
       },
     "fonts": {
-      "name": "ProximaNova",
-      "heading": "Proxima Nova Alt - Bold",
-      "body": "Proxima Nova Alt - Regular"
+      "name": ["Montserrat", "CrimsonText"],
+      "heading": "Montserrat - Bold",
+      "body": "CrimsonText - Regular"
     },
     "site": "http://student.howest.be/yacine.redjala/20172018/ma4/vertigo/",
     "screens": 5,
@@ -57,7 +57,7 @@
         "two": "People can detect which plants or trees are nearby with the map and see how rare it is. They can also add new plants by using the plant recognition tool in the app."
       },
     "fonts": {
-      "name": ["Rockwell Bold", "Futura Book"],
+      "name": ["Rockwell", "Futura"],
       "heading": "Rockwell - Bold",
       "body": "Futura - Regular"
     },

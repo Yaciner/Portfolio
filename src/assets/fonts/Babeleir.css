@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Montserrat Bold';
+  src:
+    url(Montserrat-Bold.woff2) format('woff2'),
+    url(Montserrat-Bold.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CrimsonText Regular';
+  src:
+    url(CrimsonText-Regular.woff2) format('woff2'),
+    url(CrimsonText-Regular.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

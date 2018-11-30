@@ -96,6 +96,7 @@ export default class WorkDetail extends Component {
 
   thereIsProject(project, _id) {
     let next = parseInt(_id) + 1;
+    window.scrollTo(0,0);
     if(project.length - 1 > _id) {
       return (<section className="project-next">
         <Link to={"/workdetail/" + next}>
@@ -243,18 +244,18 @@ export default class WorkDetail extends Component {
         <section className="project-fonts">
           <article className="project-fonts__big">
             <article>
-              <span className='heading_1' >Aa</span>
+              <span className={project ? 'heading_1 ' + project[_id].fonts.name[0] : null} >Aa</span>
               <span className="project-fonts__name">{project ? project[_id].fonts.heading : null}</span>
 
             </article>
             <article>
-              <span className='body_1'>Aa</span>
+              <span className={project ? 'body_1 ' + project[_id].fonts.name[1] : null}>Aa</span>
               <span className="project-fonts__name">{project ? project[_id].fonts.body : null}</span>
             </article>
           </article>
           <article className="project-fonts__example">
-            <p className='heading_2'>{project ? project[_id].name : null}</p>
-            <p className='body_2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p className={project ? 'heading_2 ' + project[_id].fonts.name[0] : null}>{project ? project[_id].name : null}</p>
+            <p className={project ? 'body_2 ' + project[_id].fonts.name[1] : null}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </article>
         </section>
         {

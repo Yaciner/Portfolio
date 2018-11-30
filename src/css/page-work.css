@@ -555,3 +555,27 @@
   padding: .6rem;
   background-color: white;
 }
+
+.Rockwell {
+  font-family: 'Rockwell Bold';
+}
+
+.Futura {
+  font-family: 'Futura Book';
+}
+
+.CrimsonText {
+  font-family: 'CrimsonText Regular';
+}
+
+.Montserrat {
+  font-family: 'Montserrat Bold';
+}
+
+.ProximaNova-Bold {
+  font-family: 'ProximaNova Bold';
+}
+
+.ProximaNova-Regular {
+  font-family: 'ProximaNova Regular';
+}
