@@ -6,7 +6,7 @@
   width: 100vw;
   text-align: center;
   padding: 2rem;
-  z-index: 200;
+  z-index: 1010;
 }
 
 
@@ -36,14 +36,23 @@ a {
   visibility: hidden;
 }
 
-.ProximaNovabold {
-  font-family: 'ProximaNova Bold';
+.heading_1 {
   font-size: 20rem;
   border-bottom: .2rem solid var(--color-white);
 }
 
-.ProximaNovaregular {
+.body_1 {
   font-size: 20rem;
-  font-family: 'ProximaNova Regular';
   border-bottom: .2rem solid var(--color-white);
+}
+
+.heading_2 {
+  text-transform: capitalize;
+  font-size: 4rem;
+  padding-bottom: 1rem;
+}
+
+.body_2 {
+  font-size: 2rem;
+  line-height: 120%;
 }

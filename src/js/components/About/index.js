@@ -2,18 +2,12 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import 'velocity-animate/velocity.ui';
 import 'particles.js/particles';
-import Typed from 'typed.js';
 import {animateAbout} from '../../lib/animateElements';
   // import * as d3 from "d3";
 import bodymovin from 'lottie-web';
 const particlesJS = window.particlesJS;
-let animationDone = false;
 
 class About extends Component {
-
-  constructor(props) {
-    super(props);
-  }
 
   componentDidMount() {
     document.querySelector(`.page-about`).classList.add(`animation-about`);

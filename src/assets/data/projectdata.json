@@ -12,9 +12,9 @@
         "two": "This is a storytelling one pager, with chosen movies we figured would fit for this assignment."
       },
     "fonts": {
-      "name": "ProximaNova",
-      "heading": "Proxima Nova Alt - Bold",
-      "body": "Proxima Nova Alt - Regular"
+      "name": ["ProximaNova Regular", "ProximaNova Bold"],
+      "heading": "ProximaNova Bold",
+      "body": "ProximaNova Regular"
     },
     "site": "http://student.howest.be/yacine.redjala/20172018/ma4/vertigo/",
     "screens": 10,
@@ -26,13 +26,13 @@
     "name": "babeleir",
     "role": "Design Development",
     "agency": "Devine (Brussels Beer Project)",
-    "summary": "In this assignment we were asked to make a tribute to Christopher Nolan’s best movies.",
-    "year": "2017",
-    "maintitle": "Tribute to Christopher Nolan",
+    "summary": "The second year of devine, we were asked to promote a beer that isn't really famous in Belgium. It's called Babeleir and it's a beer brewed in Bretagne with an oyster taste.",
+    "year": "2016",
+    "maintitle": "Beer with oysters",
     "skills": "Web / Responsive / ux",
     "target": {
-        "one": "The aim of the project was to collect information about Christopher Nolans way of thinking in his movies.",
-        "two": "This is a storytelling one pager, with chosen movies we figured would fit for this assignment."
+        "one": "We had to find a way to promote this beer, so I thought about a contest where you have to take the best selfies in order to win a trip on a boat with scubadiving.",
+        "two": "The twist is that you really have to be under water when you take the picture, and the most creative picture wins a couple of tickets for him/her and his/her mates to go on a boat and do scubadiving."
       },
     "fonts": {
       "name": "ProximaNova",
@@ -57,12 +57,12 @@
         "two": "People can detect which plants or trees are nearby with the map and see how rare it is. They can also add new plants by using the plant recognition tool in the app."
       },
     "fonts": {
-      "name": ["Rockwell", "Futura"],
+      "name": ["Rockwell Bold", "Futura Book"],
       "heading": "Rockwell - Bold",
       "body": "Futura - Regular"
     },
     "site": "http://student.howest.be/yacine.redjala/20172018/ma4/vertigo/",
-    "screens": 5,
+    "screens": 12,
     "mobile": true,
     "responsive": false
   }

@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Futura Book';
+  src:
+    url(FuturaLT-Book.woff2) format('woff2'),
+    url(FuturaLT-Book.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rockwell Bold';
+  src:
+    url(Rockwell-Bold.woff2) format('woff2'),
+    url(Rockwell-Bold.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

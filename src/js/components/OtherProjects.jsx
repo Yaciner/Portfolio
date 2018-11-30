@@ -39,7 +39,6 @@ export default class OtherProjects extends Component {
 
 }
   onOut() {
-    console.log('mouse out');
     called = false;
   }
 

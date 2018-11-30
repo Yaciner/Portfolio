@@ -45,13 +45,12 @@ export default class WorkDetail extends Component {
 
   }
 
-  // animateMouse() {
-  //   let $mouse = document.querySelector(`.scroll-mouse`);
-  //   Velocity($mouse, {translateY: `30px`} , {loop:  true}, {easing: `ease-out`});
+  // changeFonts(project, _id) {
+  //   document.querySelector(`.heading_1`).style.fontFamily = 'ProximaNova Bold';
+  //   // document.querySelector(`.body_1, .body_2`).style.fontFamily = project[_id].fonts.name[0];
   // }
 
   onOut() {
-    console.log('mouse out');
     called = false;
   }
   //
@@ -70,8 +69,12 @@ export default class WorkDetail extends Component {
 
       if(project) {
         for(let i = 0; i < project[_id].screens; i++ ) {
-          console.log(project[_id].screens);
-           images.push(<img className="project-screens__image" src={`./assets/img/${project ? project[_id].name + i : null}.png`} alt="screens" />);
+          if(project[_id].mobile) {
+            images.push(<img className="project-screens__image-mobile" src={`./assets/img/${project ? project[_id].name + i : null}.png`} alt="screens" />);
+          }
+          else {
+            images.push(<img className="project-screens__image" src={`./assets/img/${project ? project[_id].name + i : null}.png`} alt="screens" />);
+          }
         }
         return images;
       }
@@ -93,8 +96,6 @@ export default class WorkDetail extends Component {
 
   thereIsProject(project, _id) {
     let next = parseInt(_id) + 1;
-    console.log(_id);
-    console.log(next);
     if(project.length - 1 > _id) {
       return (<section className="project-next">
         <Link to={"/workdetail/" + next}>
@@ -103,9 +104,6 @@ export default class WorkDetail extends Component {
         </p>
       </Link>
       </section>);
-    }
-    else {
-      console.log('there is no next project');
     }
   }
 
@@ -245,18 +243,18 @@ export default class WorkDetail extends Component {
         <section className="project-fonts">
           <article className="project-fonts__big">
             <article>
-              <span className={project ? project[_id].fonts.name + "bold" : null} >Aa</span>
+              <span className='heading_1' >Aa</span>
               <span className="project-fonts__name">{project ? project[_id].fonts.heading : null}</span>
 
             </article>
             <article>
-              <span className={project ? project[_id].fonts.name + "regular" : null}>Aa</span>
+              <span className='body_1'>Aa</span>
               <span className="project-fonts__name">{project ? project[_id].fonts.body : null}</span>
             </article>
           </article>
           <article className="project-fonts__example">
-            <p className={project ? project[_id].fonts.name + "head" : null}>{project ? project[_id].name : null}</p>
-            <p className={project ? project[_id].fonts.name + "body" : null}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p className='heading_2'>{project ? project[_id].name : null}</p>
+            <p className='body_2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </article>
         </section>
         {

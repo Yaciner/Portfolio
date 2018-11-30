@@ -19,7 +19,6 @@ componentDidMount() {
   document.querySelector(`.page-controls__about_text`).addEventListener(`mouseleave`, this.handleMouseOut);
   if(this.isMobileDevice() === false) {
     particlesJS.load('particles-js', 'assets/data/particles.json', function() {
-    console.log('callback - particles.js config loaded');
   });
   }
 

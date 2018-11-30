@@ -30,15 +30,27 @@ class Work extends Component {
   }
 
   toggleElement() {
-    if (clickState == 0) {
+    if (clickState === 0) {
+        document.querySelector('.name').style.color = 'white';
         // code snippet 1
         clickState = 1;
         document.querySelector('.menu-overlay').classList.add('open');
+        document.querySelector('.current').style.display = 'none';
+        document.querySelector('.total').style.display = 'none';
+        document.querySelector('.slash').style.color = 'white';
+        document.querySelector('.slash').innerHTML = 'X';
+        document.querySelector(`.work-frame__indicator-p`).style.border = "1px solid white";
         document.addEventListener('keydown', (event) => {
           const keyName = event.key;
           if(keyName==='Escape'){
             clickState = 0;
             document.querySelector('.menu-overlay').classList.remove('open');
+            document.querySelector('.name').style.color = 'black';
+            document.querySelector('.current').style.display = 'inline';
+            document.querySelector('.total').style.display = 'inline';
+            document.querySelector('.slash').style.color = 'inherit';
+            document.querySelector('.slash').innerHTML = '/';
+            document.querySelector(`.work-frame__indicator-p`).style.border = "none";
 
           }
         })
@@ -48,6 +60,13 @@ class Work extends Component {
       // code snippet 2
       clickState = 0;
       document.querySelector('.menu-overlay').classList.remove('open');
+      document.querySelector('.name').style.color = 'black';
+
+      document.querySelector('.current').style.display = 'inline';
+      document.querySelector('.total').style.display = 'inline';
+      document.querySelector('.slash').style.color = 'inherit';
+      document.querySelector('.slash').innerHTML = '/';
+      document.querySelector(`.work-frame__indicator-p`).style.border = "none";
     }
   }
 
@@ -77,6 +96,14 @@ class Work extends Component {
        autoplay: true,
        path: `../assets/data/line.json`
      });
+
+     bodymovin.loadAnimation({
+        container: document.querySelector(`.indicator_anim`),
+        renderer: `svg`,
+        loop: true,
+        autoplay: true,
+        path: `../assets/data/indicator.json`
+      });
 
      // bodymovin.loadAnimation({
      //    container: document.querySelector(`.circles-animation`),
@@ -144,7 +171,6 @@ class Work extends Component {
   };
 
   keyDown = () => {
-    console.log('keydown detected');
     if (this.state.case !== this.state.data.length) {
       if (this.state.case + 1 <= this.state.data.length - 1) {
         this.setState({ case: this.state.case + 1 });
@@ -192,10 +218,12 @@ class Work extends Component {
   }
 
   generateLister() {
-    const leftFrame = document.querySelector(`.work-frame`).getBoundingClientRect().left;
-    document.body.addEventListener('onresize', this.generateLister);
-    document.querySelector(`.work-frame__indicator`).style.left = 1000;
-    console.log(document.querySelector(`.work-frame__indicator`).style.left);
+    // let rightFrame = document.querySelector(`.work-frame`).getBoundingClientRect().right;
+    window.addEventListener('resize', this.generateLister);
+    // rightFrame = rightFrame;
+    // let value = rightFrame.toString() + 'px';
+    // console.log(value);
+    // document.querySelector(`.work-frame__indicator`).style.left = value;
   }
 
 	checkStatus = (response) => {
@@ -314,13 +342,14 @@ class Work extends Component {
               </div>
             </section>
             <section className="work-frame">
+            <div className="indicator_anim"></div>
               <div className="work-frame__indicator">
                 <p className="work-frame__indicator-p">
                   <span className="current">
                   { this.state.case + 1 }
                   </span>
                   <span className="slash">
-
+                    /
                   </span>
                   <span className="total">
                   { this.state.data ? this.state.data.length : 0 }
