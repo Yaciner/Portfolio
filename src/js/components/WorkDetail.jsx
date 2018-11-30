@@ -216,7 +216,7 @@ export default class WorkDetail extends Component {
                   project ? project[_id].skills : null
                 }
               </p>
-              <p>live version</p>
+              <p><a className="link-to-live" href={project ? project[_id].site : null}>Live version</a></p>
             </article>
             <article className="target-info">
               <div></div>

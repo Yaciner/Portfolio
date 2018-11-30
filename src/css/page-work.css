@@ -309,6 +309,7 @@
   font-family: 'Roboto Regular';
   text-transform: uppercase;
   padding-top: 1.4rem;
+  padding-bottom: 2rem;
 }
 
 .target-info {
@@ -578,4 +579,10 @@
 
 .ProximaNova-Regular {
   font-family: 'ProximaNova Regular';
+}
+
+.link-to-live {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--color-blue);
 }
