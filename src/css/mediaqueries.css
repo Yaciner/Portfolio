@@ -152,6 +152,10 @@
   .project-next {
     height: 21rem;
   }
+
+  .overlay-menu ul li a{
+    font-size: 6rem;
+  }
 }
 
 
@@ -247,6 +251,10 @@
 
   .scroll-mouse {
     display: none;
+  }
+
+  .overlay-menu ul li a{
+    font-size: 3rem;
   }
 }
 
