@@ -204,6 +204,17 @@
   .target-info {
     width: 80vw;
   }
+
+  .work-frame__indicator-p {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .indicator_anim {
+    width: 9rem;
+    height: 9rem;
+    padding: .5rem;
+  }
 }
 
 @media (width <= 480px) {
@@ -255,6 +266,21 @@
 
   .overlay-menu ul li a{
     font-size: 3rem;
+  }
+
+  .work-frame__indicator-p {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .indicator_anim {
+    width: 7rem;
+    height: 7rem;
+    padding: .3rem;
+  }
+
+  .work-frame__indicator-p {
+    font-size: 2.7rem;
   }
 }
 
