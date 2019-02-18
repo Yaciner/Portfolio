@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import {animateDetail} from '../lib/animateElements';
-// import bodymovin from 'lottie-web';
 // import Velocity from 'velocity-animate';
 // import 'velocity-animate/velocity.ui';
 // import Mouse from '../lib/mouse';
@@ -119,7 +118,7 @@ export default class WorkDetail extends Component {
     const { _id } = this.props;
 
     if (error) return <h1>An error occured</h1>
-    if (!project) return <h1>loading</h1>
+    if (!project) return <div className="loading-animation">loading</div>
     return (
       <div className="detail">
       <div><p className="status"></p></div>
