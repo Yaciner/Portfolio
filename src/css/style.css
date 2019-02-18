@@ -10,12 +10,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
 }
 
 body {

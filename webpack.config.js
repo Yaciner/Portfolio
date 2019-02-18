@@ -3,9 +3,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const ImageminPlugin = require('imagemin-webpack-plugin').default
 const imageminJpegRecompress = require('imagemin-jpeg-recompress');
-
 const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 const smp = new SpeedMeasurePlugin();
+const CompressionPlugin = require('compression-webpack-plugin');
 
 const CriticalPlugin = require('webpack-plugin-critical').CriticalPlugin;
 
@@ -57,7 +57,7 @@ const commonConfig = smp.wrap(merge([
                 bypassOnDebug: true,
                 mozjpeg: {
                   progressive: true,
-                  quality: 65
+                  quality: 80
                 },
                 // optipng.enabled: false will disable optipng
                 optipng: {
@@ -112,6 +112,10 @@ const productionConfig = merge([
         plugins: [
           imageminJpegRecompress({})
         ]
+      }),
+      new CompressionPlugin({
+        cache: true,
+        algorithm: 'gzip'
       }),
       new CriticalPlugin({
         src: 'index.html',

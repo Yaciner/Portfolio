@@ -5,7 +5,6 @@ import Work from '../components/Work';
 import About from '../components/About';
 import Detail from '../components/WorkDetail';
 import More from '../components/OtherProjects';
-// import { createHashHistory } from 'history';
 
 class App extends Component {
   //
