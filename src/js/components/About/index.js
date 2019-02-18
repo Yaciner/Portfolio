@@ -58,7 +58,7 @@ class About extends Component {
         <section className="page-about__overlay">
           <h1 className="about-header__text">
           I’m <span className="bold-colored">Yacine Redjala</span>,
-          a <span className="link-to-out"><Link to="https://www.devine.be">devine</Link></span> <span className="bold-colored">student</span> enjoying
+          a <span className="link-to-out"><a href="https://www.devine.be">devine</a></span> <span className="bold-colored">student</span> enjoying
           everything related to web and I'm enthusiastic about learning as much
           as possible<span className="colored">.</span><br></br><br></br>
 

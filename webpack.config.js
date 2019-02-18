@@ -127,6 +127,7 @@ const developmentConfig = merge([
   {
     devServer: {
       overlay: true,
+      open: true,
       contentBase: PATHS.src,
       historyApiFallback: true
     }

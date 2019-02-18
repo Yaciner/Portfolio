@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import {animateDetail} from '../lib/animateElements';
-// import bodymovin from 'lottie-web';
-// import Velocity from 'velocity-animate';
-// import 'velocity-animate/velocity.ui';
-// import Mouse from '../lib/mouse';
 let called = false;
+const mobile = `mobile`;
 
 export default class WorkDetail extends Component {
   state = {
@@ -15,7 +12,7 @@ export default class WorkDetail extends Component {
 
   componentDidMount() {
     if (!this.state.project) {
-      fetch('./assets/data/projectdata.json', {
+      fetch('../assets/data/projectdata.json', {
         headers : {
          'Content-Type': 'application/json',
          'Accept': 'application/json'
@@ -31,7 +28,6 @@ export default class WorkDetail extends Component {
         }).catch((e => this.setState({ error: e })));
         return
     }
-
   }
 
   onHover() {
@@ -42,27 +38,11 @@ export default class WorkDetail extends Component {
     else {
       this.onOut();
     }
-
   }
-
-  // changeFonts(project, _id) {
-  //   document.querySelector(`.heading_1`).style.fontFamily = 'ProximaNova Bold';
-  //   // document.querySelector(`.body_1, .body_2`).style.fontFamily = project[_id].fonts.name[0];
-  // }
 
   onOut() {
     called = false;
   }
-  //
-  // animate() {
-  //   bodymovin.loadAnimation({
-  //      container: document.querySelector(`.animation-next`),
-  //      renderer: `svg`,
-  //      loop: false,
-  //      autoplay: true,
-  //      path: `../assets/data/stroke.json`
-  //    });
-  // }
 
   returnScreens(project, _id) {
       let images = [];
@@ -70,10 +50,10 @@ export default class WorkDetail extends Component {
       if(project) {
         for(let i = 0; i < project[_id].screens; i++ ) {
           if(project[_id].mobile) {
-            images.push(<img className="project-screens__image-mobile" src={`./assets/img/${project ? project[_id].name + i : null}.png`} alt="screens" />);
+            images.push(<img key={i} className="project-screens__image-mobile" src={`../assets/img/${project ? project[_id].name + i : null}.png`} alt="screens" />);
           }
           else {
-            images.push(<img className="project-screens__image" src={`./assets/img/${project ? project[_id].name + i : null}.png`} alt="screens" />);
+            images.push(<img key={i} className="project-screens__image" src={`../assets/img/${project ? project[_id].name + i : null}.png`} alt="screens" />);
           }
         }
         return images;
@@ -84,7 +64,7 @@ export default class WorkDetail extends Component {
     if(project) {
       if(project[_id].responsive === true) {
         return (<section className="project-responsive">
-            <img className="project-responsive__image" src={`./assets/img/${project ? project[_id].name : null}responsive.png`} alt="responsive" />
+            <img className="project-responsive__image" src={`../assets/img/${project ? project[_id].name : null}responsive.png`} alt="responsive" />
             <article>
               <header>Responsive.</header>
               <p>{project ? project[_id].responsiveinfo : null}</p>
@@ -95,7 +75,7 @@ export default class WorkDetail extends Component {
   }
 
   thereIsProject(project, _id) {
-    let next = parseInt(_id) + 1;
+    let next = parseInt(_id, 10) + 1;
     window.scrollTo(0,0);
     if(project.length - 1 > _id) {
       return (<section className="project-next">
@@ -119,7 +99,7 @@ export default class WorkDetail extends Component {
     const { _id } = this.props;
 
     if (error) return <h1>An error occured</h1>
-    if (!project) return <h1>loading</h1>
+    if (!project) return <div className="loading-animation">loading</div>
     return (
       <div className="detail">
       <div><p className="status"></p></div>
@@ -134,7 +114,7 @@ export default class WorkDetail extends Component {
         <section className="page-work" id="page-work">
           <section className="page-work__content">
             <Link className="page-work__back" to="/work">
-              <img className="page-work__back_arrow" src="./assets/svg/arrow.svg" alt="arrow" />
+              <img className="page-work__back_arrow" src="../assets/svg/arrow.svg" alt="arrow" />
              <p>Back to cases</p>
 
             </Link>
@@ -161,7 +141,7 @@ export default class WorkDetail extends Component {
               </div>
               <div className="content_header__right">
                 <div className="content-summary__image">
-                 <img className={`content-summary__image-style ${project[_id].mobile ? new String("mobile") : null}`} src={`./assets/img/${project ? project[_id].name : null}.png`} alt="Vertigo" />
+                 <img className={`content-summary__image-style ${project[_id].mobile ? mobile : null}`} src={`../assets/img/${project ? project[_id].name : null}.png`} alt="Vertigo" />
                </div>
               </div>
             </section>
@@ -200,7 +180,7 @@ export default class WorkDetail extends Component {
           </section>
         </section>
         <div className="scroll-mouse__container">
-          <img className="scroll-mouse" src='./assets/svg/mouse.svg' alt="mouse" />
+          <img className="scroll-mouse" src='../assets/svg/mouse.svg' alt="mouse" />
 
         </div>
         <section className="project-information">
@@ -240,7 +220,6 @@ export default class WorkDetail extends Component {
               {this.returnScreens(project, _id)}
           </div>
         </section>
-
         <section className="project-fonts">
           <article className="project-fonts__big">
             <article>
@@ -261,7 +240,6 @@ export default class WorkDetail extends Component {
         {
           this.checkIfResponsive(project, _id)
         }
-
         {
           this.thereIsProject(project, _id)
         }

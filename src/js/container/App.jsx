@@ -1,12 +1,21 @@
 import React, {Component} from 'react';
-import {HashRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
+import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 import Home from '../components/Homepage';
 import Work from '../components/Work';
 import About from '../components/About';
 import Detail from '../components/WorkDetail';
 import More from '../components/OtherProjects';
+// import { createHashHistory } from 'history';
 
 class App extends Component {
+  //
+  // history = createHashHistory({
+  //   basename: "", // The base URL of the app (see below)
+  //   hashType: "slash", // The hash type to use (see below)
+  //   // A function to use to confirm navigation with the user (see below)
+  //   getUserConfirmation: (message, callback) => callback(window.confirm(message)),
+  // });
+
 
   renderHome = () => {
     return <Home />;
@@ -23,7 +32,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+      <BrowserRouter>
         <Switch>
           <Route exact path='/' render={this.renderHome} />
           <Route exact path='/work' component={Work} />
@@ -32,7 +41,7 @@ class App extends Component {
           <Route exact path='/workdetail/:_id' render={this.renderDetailMetId} />
           <Route render={() => <Redirect to='/' />} />
         </Switch>
-      </Router>
+      </BrowserRouter>
     );
   }
 }

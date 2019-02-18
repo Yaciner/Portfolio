@@ -1,5 +1,3 @@
-/* EVERYTHING IN WIDTH */
-
 @media (width <= 1400px) {
   .content-summary__image img {
     width: 35vw;
@@ -285,6 +283,19 @@
 }
 
 @media (width <= 380px) {
+  .overlay-menu ul {
+    height: 60vh;
+    margin-top: 30%;
+  }
+
+  .total {
+    margin-top: 2rem;
+  }
+
+  .mobile {
+    width: 17rem !important;
+  }
+
   .name {
     font-size: 1.6rem;
     padding: 1.5rem;

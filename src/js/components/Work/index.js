@@ -2,20 +2,12 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import {workPage} from '../../lib/animateElements';
 import bodymovin from 'lottie-web';
-// import Hammer from 'hammerjs';
-// import Velocity from 'velocity-animate';
-// import 'velocity-animate/velocity.ui';
-// import Mouse from '../../lib/mouse';
-// let scrollPos = 0;
 let supportsWheel = !1;
-// let animEnCours = !1
 let delta = 0;
-// let current = 0;
-// let sens = !0;
-// let quotient = -1;
-// let navigationActive = false;
+const mobile = `mobile`;
 let timeOut = null;
 let clickState = 0;
+let passiveSupported = false;
 
 class Work extends Component {
   state = {
@@ -41,17 +33,16 @@ class Work extends Component {
         document.querySelector('.slash').innerHTML = 'X';
         document.querySelector(`.work-frame__indicator-p`).style.border = "1px solid white";
         document.addEventListener('keydown', (event) => {
-          const keyName = event.key;
-          if(keyName==='Escape'){
-            clickState = 0;
-            document.querySelector('.menu-overlay').classList.remove('open');
-            document.querySelector('.name').style.color = 'black';
-            document.querySelector('.current').style.display = 'inline';
-            document.querySelector('.total').style.display = 'inline';
-            document.querySelector('.slash').style.color = 'inherit';
-            document.querySelector('.slash').innerHTML = '/';
-            document.querySelector(`.work-frame__indicator-p`).style.border = "none";
-
+        const keyName = event.key;
+        if(keyName==='Escape'){
+          clickState = 0;
+          document.querySelector('.menu-overlay').classList.remove('open');
+          document.querySelector('.name').style.color = 'black';
+          document.querySelector('.current').style.display = 'inline';
+          document.querySelector('.total').style.display = 'inline';
+          document.querySelector('.slash').style.color = 'inherit';
+          document.querySelector('.slash').innerHTML = '/';
+          document.querySelector(`.work-frame__indicator-p`).style.border = "none";
           }
         })
     }
@@ -61,7 +52,6 @@ class Work extends Component {
       clickState = 0;
       document.querySelector('.menu-overlay').classList.remove('open');
       document.querySelector('.name').style.color = 'black';
-
       document.querySelector('.current').style.display = 'inline';
       document.querySelector('.total').style.display = 'inline';
       document.querySelector('.slash').style.color = 'inherit';
@@ -71,11 +61,9 @@ class Work extends Component {
   }
 
   componentDidMount() {
-    // document.querySelector(`.circle-mouse`).style.fill = `black`;
     document.querySelector(`.work-frame__button`).addEventListener(`mouseenter`, this.handleMouseEnter);
     document.querySelector(`.work-frame__button`).addEventListener(`mouseleave`, this.handleMouseOut);
     document.querySelector(`.work-frame__indicator`).addEventListener(`click`, this.toggleElement);
-    // Mouse();
     this.generateLister();
 
     fetch('./assets/data/projectdata.json', {
@@ -105,67 +93,41 @@ class Work extends Component {
         path: `../assets/data/indicator.json`
       });
 
-     // bodymovin.loadAnimation({
-     //    container: document.querySelector(`.circles-animation`),
-     //    renderer: `svg`,
-     //    loop: false,
-     //    autoplay: true,
-     //    path: `../assets/data/circles.json`
-     //  });
-    // let $container = document.querySelector('.work-frame');
-    //
-    // // Create a manager to manager the element
-    // let manager = new Hammer.Manager($container);
-    //
-    // // Create a recognizer
-    // let Swipe = new Hammer.Swipe();
-    //
-    // // Add the recognizer to the manager
-    // manager.add(Swipe);
-    // // Declare global variables to swiped correct distance
-    // let deltaX = 0;
-    // let deltaY = 0;
-    //
-    // manager.on('swipe', function(e) {
-    //   deltaX = deltaX + e.deltaX;
-    //   let direction = e.offsetDirection;
-    //   if(direction === 8) {
-    //     if (this.state.case !== this.state.data.length) {
-    //       if (this.state.case + 1 <= this.state.data.length - 1) {
-    //         this.setState({ case: this.state.case + 1 });
-    //         workPage();
-    //       }
-    //     }
-    //   }
-    //
-    //   if(direction === 16) {
-    //     if (this.state.case - 1 >= 0) {
-    //       this.setState({case: this.state.case - 1});
-    //       workPage();
-    //     }
-    //   }
-    // });
+
+  try {
+    var options = {
+      get passive() { // This function will be called when the browser
+                      //     attempts to access the passive property.
+        passiveSupported = true;
+      }
+    };
+
+    window.addEventListener("test", options, options);
+    window.removeEventListener("test", options, options);
+  } catch(err) {
+    passiveSupported = false;
+  }
 
     document.querySelector(`.name`).style.color = '#3B3B3B';
-    document.addEventListener("wheel", this.scrollEvent, {passive: true}),
-    document.addEventListener("mousewheel", this.scrollEvent, {passive: true}),
-    document.addEventListener("DOMMouseScroll", this.scrollEvent, {passive: true}),
-    document.addEventListener('keydown', (event) => {
+    document.addEventListener(`wheel`, this.scrollEvent, passiveSupported ? { passive: true } : false);
+    document.addEventListener(`mousewheel`, this.scrollEvent, passiveSupported ? { passive: true } : false);
+    document.addEventListener(`DOMMouseScroll`,passiveSupported ? { passive: true } : false);
+    document.addEventListener(`keydown`, (event) => {
       const keyName = event.key;
       if(keyName==='ArrowDown') this.keyDown()
       if(keyName==='ArrowUp') this.keyUp()
     })
 
     const selectedOption = localStorage.getItem('currentCase') || 0;
-    if (selectedOption !== 'NaN') this.setState({case: parseInt(selectedOption) })
+    if (selectedOption !== 'NaN') this.setState({case: parseInt(selectedOption, 10) })
     document.querySelector(`.name`).style.color = '#3B3B3B';
     document.querySelector(`.work-frame__indicator`).addEventListener(`click`, this.navigationClickedActive);
   };
 
   componentWillUnmount() {
-    document.removeEventListener('wheel', this.scrollEvent, {passive: true});
-    document.removeEventListener('mousewheel', this.scrollEvent, {passive: true});
-    document.removeEventListener('DOMMouseScroll', this.scrollEvent, {passive: true});
+    document.removeEventListener('wheel', this.scrollEvent, passiveSupported ? { passive: true } : false);
+    document.removeEventListener('mousewheel', this.scrollEvent, passiveSupported ? { passive: true } : false);
+    document.removeEventListener('DOMMouseScroll', this.scrollEvent, passiveSupported ? { passive: true } : false);
     if (timeOut !== null) clearTimeout(timeOut);
     localStorage.setItem('currentCase', this.state.case);
   };
@@ -189,8 +151,7 @@ class Work extends Component {
 
   scrollEvent = e => {
     let { scrolled } = this.state;
-
-    if ("wheel" === e.type) supportsWheel = !0;
+    if (`wheel` === e.type) supportsWheel = !0;
     else if (supportsWheel) return;
 
     delta = e.deltaY || -e.wheelDelta || e.detail || 1;
@@ -231,23 +192,8 @@ class Work extends Component {
     return response;
 	};
 
-  // navigationClickedActive() {
-  //   navigationActive = true;
-  //   console.log(navigationActive);
-  //   document.querySelector(`.overlay`).classList.add(`active`);
-  //   var para = document.createElement("a");
-  //   var node = document.createTextNode("X");
-  //   para.appendChild(node);
-  //   var element = document.querySelector(".work-frame__indicator-p");
-  //   element.appendChild(para);
-  //   document.querySelector(`.current`).style.visibility = "hidden";
-  //   document.querySelector(`.slash`).style.visibility = "hidden";
-  //   document.querySelector(`.total`).style.visibility = "hidden";
-  //   document.querySelector(`.work-frame__indicator-p`).classList.add(`work-frame__indicator-p_active`);
-  // }
-
   renderHeaderImage(project) {
-    return (<img className={`content-summary__image-style ${project[this.state.case].mobile ? new String("mobile") : null}`} src={`./assets/img/${project[this.state.case].name}.png`} alt="Vertigo" />)
+    return (<img className={`content-summary__image-style ${project[this.state.case].mobile ? mobile : null}`} src={`./assets/img/${project[this.state.case].name}.png`} alt="Vertigo" />)
   }
 
   render() {
