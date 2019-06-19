@@ -98,7 +98,7 @@
    background: $color-main;
    top: 0;
    left: 0;
-   width: 100%;
+   width: 50%;
    height: 0%;
    opacity: 0;
    visibility: hidden;
@@ -526,16 +526,20 @@
   color: white;
   font-family: 'PTSerif Bold';
   width: 100vw;
-  height: 100vh;
+  height: 70vh;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  font-size: 8rem;
+  font-size: 7.5rem;
 }
 
 .overlay-menu {
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .overlay-menu ul li a {

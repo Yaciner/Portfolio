@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
+
 let called = false;
 
 export default class OtherProjects extends Component {
@@ -69,7 +70,7 @@ export default class OtherProjects extends Component {
                 <header>
                 <h1>Just a random charachter I made and animated.</h1>
                 </header>
-                  <video id="video" autoPlay loop muted>
+                  <video onClick={this.videoToggle} id="video" autoPlay loop muted>
                      <source src="./assets/video/charachter.mp4" type="video/mp4" media="all and (max-width:480px)" />
                   </video>
                 </section>
@@ -121,7 +122,30 @@ export default class OtherProjects extends Component {
                      <source src="./assets/video/doodle.mp4" type="video/mp4" media="all and (max-width:480px)" />
                   </video>
                 </section>
-
+                <section className="other-element">
+                <header>
+                  <h1>Advanced typo animations for The Faculty mockup.</h1>
+                </header>
+                  <video id="video" autoPlay loop muted>
+                     <source src="./assets/video/faculty.mp4" type="video/mp4" media="all and (max-width:480px)" />
+                  </video>
+                </section>
+                <section className="other-element">
+                <header>
+                  <h1>An AE 3D mockup for Italmaster.</h1>
+                </header>
+                  <video id="video" autoPlay loop muted>
+                     <source src="./assets/video/italmaster.mp4" type="video/mp4" media="all and (max-width:480px)" />
+                  </video>
+                </section>
+                <section className="other-element">
+                <header>
+                  <h1>A brand case for hairco.</h1>
+                </header>
+                  <video id="video" autoPlay loop muted>
+                     <source src="./assets/video/hairco.mp4" type="video/mp4" media="all and (max-width:480px)" />
+                  </video>
+                </section>
               </section>
             </section>
           </section>

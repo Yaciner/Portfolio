@@ -61,6 +61,7 @@ class Work extends Component {
   }
 
   componentDidMount() {
+    // console.log(project[this.state.case]);
     document.querySelector(`.work-frame__button`).addEventListener(`mouseenter`, this.handleMouseEnter);
     document.querySelector(`.work-frame__button`).addEventListener(`mouseleave`, this.handleMouseOut);
     document.querySelector(`.work-frame__indicator`).addEventListener(`click`, this.toggleElement);

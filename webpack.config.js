@@ -26,6 +26,7 @@ const commonConfig = smp.wrap(merge([
       path: PATHS.dist,
       filename: `js/script.[hash].js`,
       publicPath: `/`
+      // publicPath: `https://www.yacine.be/`
     },
     devtool: 'source-map',
 
