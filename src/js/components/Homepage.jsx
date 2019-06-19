@@ -27,7 +27,7 @@ componentDidMount() {
 
 animateText() {
   new Typed('.page-home__subtitle', {
-  strings: [`I love motion & development.`, `My name is Yacine Redjala.`, `I almost graduated.`, `Already looking for a new opportunity.`],
+  strings: [`My name is Yacine Redjala.`, `I almost graduated.`, `Already looking for a new opportunity.`],
   typeSpeed: 20,
   backSpeed: 0,
   smartBackspace: true,

@@ -104,6 +104,11 @@ class About extends Component {
           </article>
         </section>
       </main>
+      <footer className="social_footer">
+        <a href="https://www.facebook.com/yacine.redjala"><img className="social_icon" src='./assets/svg/fb.svg' alt="fb" /></a>
+        <a href="https://www.linkedin.com/in/yacine-redjala/"><img className="social_icon" src='./assets/svg/linkedin.svg' alt="linked in" /></a>
+        <a href="https://github.com/Yaciner"><img className="social_icon" src='./assets/svg/github.svg' alt="github" /></a>
+      </footer>
       </div>
 
     );

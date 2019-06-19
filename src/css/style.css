@@ -26,3 +26,32 @@ body {
 .circle-mouse {
   transform: translateY(0);
 }
+
+.social_icon {
+  width: 2rem;
+  padding: 1rem 3rem;
+  height: auto;
+}
+
+.social_footer {
+  background-color: white;
+  height: 2rem;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.social_footer_alt {
+  margin-top: 4vh;
+  background-color: black;
+  height: 2rem;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.social_icon_alt {
+  width: 2rem;
+  padding: 1rem 3rem;
+  height: auto;
+}

@@ -222,6 +222,11 @@ class Work extends Component {
               <li><Link to='/workdetail/2'>WePlant</Link></li>
               <li><Link to='/moreprojects'>More projects</Link></li>
             </ul>
+            <footer className="social_footer_alt">
+              <a href="https://www.facebook.com/yacine.redjala"><img className="social_icon_alt" src='../assets/svg/fb_w.svg' alt="fb" /></a>
+              <a href="https://www.linkedin.com/in/yacine-redjala/"><img className="social_icon_alt" src='../assets/svg/linkedin_w.svg' alt="linked in" /></a>
+              <a href="https://github.com/Yaciner"><img className="social_icon_alt" src='../assets/svg/github_w.svg' alt="github" /></a>
+            </footer>
           </nav>
         </div>
 
