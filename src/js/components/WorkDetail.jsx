@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import {animateDetail} from '../lib/animateElements';
-// import bodymovin from 'lottie-web';
-// import Velocity from 'velocity-animate';
-// import 'velocity-animate/velocity.ui';
-// import Mouse from '../lib/mouse';
 let called = false;
 
 export default class WorkDetail extends Component {
@@ -45,24 +41,9 @@ export default class WorkDetail extends Component {
 
   }
 
-  // changeFonts(project, _id) {
-  //   document.querySelector(`.heading_1`).style.fontFamily = 'ProximaNova Bold';
-  //   // document.querySelector(`.body_1, .body_2`).style.fontFamily = project[_id].fonts.name[0];
-  // }
-
   onOut() {
     called = false;
   }
-  //
-  // animate() {
-  //   bodymovin.loadAnimation({
-  //      container: document.querySelector(`.animation-next`),
-  //      renderer: `svg`,
-  //      loop: false,
-  //      autoplay: true,
-  //      path: `../assets/data/stroke.json`
-  //    });
-  // }
 
   returnScreens(project, _id) {
       let images = [];
@@ -111,7 +92,6 @@ export default class WorkDetail extends Component {
   buildMouse() {
     // document.querySelector(`.circle-mouse`).style.fill = `black`;
     // Mouse();
-    // console.log('test');
   }
 
   render() {

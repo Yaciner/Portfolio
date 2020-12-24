@@ -11,11 +11,7 @@ class App extends Component {
   renderHome = () => {
     return <Home />;
   }
-
-  // renderDetail = () => {
-  //   return <Detail />;
-  // }
-
+  
   renderDetailMetId = ({match}) => {
     const {_id} = match.params;
     return <Detail _id={_id} />;

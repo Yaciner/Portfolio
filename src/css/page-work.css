@@ -58,7 +58,7 @@
   z-index: 1010;
   color: var(--color-gray);
   align-self: center;
-  margin-left: 50%;
+  right: -4rem;
 }
 
 
@@ -552,7 +552,7 @@
   width: 11rem;
   height: 11rem;
   align-self: center;
-  margin-left: 50%;
+  right: -5.3rem;
   padding: .6rem;
   background-color: white;
 }
