@@ -22,17 +22,3 @@ export function animateDetail() {
         AnimsOnScroll(elem, `transition.slideUpIn`, 1000);
     });
 };
-
-  // const $slidesLeft = document.querySelectorAll(`.dreaming__article-left, .dimension__article-left, .memory__article-left`);
-  // const $slidesRight = document.querySelectorAll(`.dreaming__article-bottom, .subscribe__article`);
-  // const $flipsIn = document.querySelectorAll(`.dreaming__article-right, .dimension__article-image`);
-  // Anims($slidesUp, `transition.slideUpIn`, 3000);
-  // $slidesLeft.forEach(elem => {
-  //   Anims(elem, `transition.slideLeftIn`, 1000);
-  // });
-  // $flipsIn.forEach(elem => {
-  //   Anims(elem, `transition.flipXIn`, 1000);
-  // });
-  // $slidesRight.forEach(elem => {
-  //   Anims(elem, `transition.slideRightIn`, 1000);
-  // });

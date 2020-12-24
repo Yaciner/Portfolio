@@ -72,9 +72,7 @@
 
      static sub(v1, v2)
      {
-       //hier bestaat this niet, dit is alsof je een functie oproept
        const copy = v1.clone().sub(v2);
-       //copy.sub(v2);
        return copy;
      }
   };

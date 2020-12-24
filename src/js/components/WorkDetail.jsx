@@ -91,7 +91,6 @@ export default class WorkDetail extends Component {
   buildMouse() {
     // document.querySelector(`.circle-mouse`).style.fill = `black`;
     // Mouse();
-    // console.log('test');
   }
 
   render() {

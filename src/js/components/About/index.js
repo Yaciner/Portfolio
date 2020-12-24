@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import 'velocity-animate/velocity.ui';
 import 'particles.js/particles';
 import {animateAbout} from '../../lib/animateElements';
-  // import * as d3 from "d3";
 import bodymovin from 'lottie-web';
 const particlesJS = window.particlesJS;
 

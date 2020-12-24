@@ -21,10 +21,9 @@ componentDidMount() {
     particlesJS.load('particles-js', 'assets/data/particles.json', function() {
   });
   }
-
-  this.animateText();
 }
 
+<<<<<<< HEAD
 animateText() {
   new Typed('.page-home__subtitle', {
   strings: [`My name is Yacine Redjala.`, `I almost graduated.`, `Already looking for a new opportunity.`],
@@ -36,6 +35,8 @@ animateText() {
 });
  };
 
+=======
+>>>>>>> master
 isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };
@@ -92,9 +93,7 @@ isMobileDevice() {
           </div>
 
           <h1 className="page-home__title">
-          I'm a digital designer and developer<span className="colored">.</span>
-          <br></br>
-            <span className="page-home__subtitle">My name is Yacine Redjala.</span>
+            I'm a digital designer and developer<span className="colored">.</span>
           </h1>
         </section>
       </main>
