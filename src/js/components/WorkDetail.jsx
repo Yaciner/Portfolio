@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import {animateDetail} from '../lib/animateElements';
+import Header from './Header';
 let called = false;
 
 export default class WorkDetail extends Component {
@@ -103,13 +104,7 @@ export default class WorkDetail extends Component {
     return (
       <div className="detail">
       <div><p className="status"></p></div>
-      <header>
-      <nav>
-        <div className="name">
-          <span><Link to='/'>Yacine.</Link></span>
-        </div>
-      </nav>
-      </header>
+      <Header />
       <main>
         <section className="page-work" id="page-work">
           <section className="page-work__content">

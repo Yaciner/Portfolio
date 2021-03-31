@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import {workPage} from '../../lib/animateElements';
 import bodymovin from 'lottie-web';
+import Header from '../Header';
 // import Hammer from 'hammerjs';
 // import Velocity from 'velocity-animate';
 // import 'velocity-animate/velocity.ui';
@@ -105,47 +106,6 @@ class Work extends Component {
         path: `../assets/data/indicator.json`
       });
 
-     // bodymovin.loadAnimation({
-     //    container: document.querySelector(`.circles-animation`),
-     //    renderer: `svg`,
-     //    loop: false,
-     //    autoplay: true,
-     //    path: `../assets/data/circles.json`
-     //  });
-    // let $container = document.querySelector('.work-frame');
-    //
-    // // Create a manager to manager the element
-    // let manager = new Hammer.Manager($container);
-    //
-    // // Create a recognizer
-    // let Swipe = new Hammer.Swipe();
-    //
-    // // Add the recognizer to the manager
-    // manager.add(Swipe);
-    // // Declare global variables to swiped correct distance
-    // let deltaX = 0;
-    // let deltaY = 0;
-    //
-    // manager.on('swipe', function(e) {
-    //   deltaX = deltaX + e.deltaX;
-    //   let direction = e.offsetDirection;
-    //   if(direction === 8) {
-    //     if (this.state.case !== this.state.data.length) {
-    //       if (this.state.case + 1 <= this.state.data.length - 1) {
-    //         this.setState({ case: this.state.case + 1 });
-    //         workPage();
-    //       }
-    //     }
-    //   }
-    //
-    //   if(direction === 16) {
-    //     if (this.state.case - 1 >= 0) {
-    //       this.setState({case: this.state.case - 1});
-    //       workPage();
-    //     }
-    //   }
-    // });
-
     document.querySelector(`.name`).style.color = '#3B3B3B';
     document.addEventListener("wheel", this.scrollEvent, {passive: true}),
     document.addEventListener("mousewheel", this.scrollEvent, {passive: true}),
@@ -218,33 +178,13 @@ class Work extends Component {
   }
 
   generateLister() {
-    // let rightFrame = document.querySelector(`.work-frame`).getBoundingClientRect().right;
     window.addEventListener('resize', this.generateLister);
-    // rightFrame = rightFrame;
-    // let value = rightFrame.toString() + 'px';
-    // console.log(value);
-    // document.querySelector(`.work-frame__indicator`).style.left = value;
   }
 
 	checkStatus = (response) => {
 		if (!response.ok) throw Error(response.statusText);
     return response;
 	};
-
-  // navigationClickedActive() {
-  //   navigationActive = true;
-  //   console.log(navigationActive);
-  //   document.querySelector(`.overlay`).classList.add(`active`);
-  //   var para = document.createElement("a");
-  //   var node = document.createTextNode("X");
-  //   para.appendChild(node);
-  //   var element = document.querySelector(".work-frame__indicator-p");
-  //   element.appendChild(para);
-  //   document.querySelector(`.current`).style.visibility = "hidden";
-  //   document.querySelector(`.slash`).style.visibility = "hidden";
-  //   document.querySelector(`.total`).style.visibility = "hidden";
-  //   document.querySelector(`.work-frame__indicator-p`).classList.add(`work-frame__indicator-p_active`);
-  // }
 
   renderHeaderImage(project) {
     return (<img className={`content-summary__image-style ${project[this.state.case].mobile ? new String("mobile") : null}`} src={`./assets/img/${project[this.state.case].name}.png`} alt="Vertigo" />)
@@ -259,13 +199,7 @@ class Work extends Component {
         <div>
           <p className="status"></p>
         </div>
-        <header>
-          <nav>
-            <div className="name">
-              <span><Link to='/'>Yacine.</Link></span>
-            </div>
-          </nav>
-        </header>
+        <Header />
         <main>
         <div className="menu-overlay" >
           <nav className="overlay-menu">
