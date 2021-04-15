@@ -17,20 +17,6 @@ componentDidMount() {
   }
 }
 
-<<<<<<< HEAD
-animateText() {
-  new Typed('.page-home__subtitle', {
-  strings: [`My name is Yacine Redjala.`, `I almost graduated.`, `Already looking for a new opportunity.`],
-  typeSpeed: 20,
-  backSpeed: 0,
-  smartBackspace: true,
-  fadeOut: true,
-  loop: true
-});
- };
-
-=======
->>>>>>> master
 isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };

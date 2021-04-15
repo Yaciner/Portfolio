@@ -60,10 +60,6 @@ class Work extends Component {
   }
 
   componentDidMount() {
-<<<<<<< HEAD
-    // console.log(project[this.state.case]);
-=======
->>>>>>> feature/rework
     document.querySelector(`.work-frame__button`).addEventListener(`mouseenter`, this.handleMouseEnter);
     document.querySelector(`.work-frame__button`).addEventListener(`mouseleave`, this.handleMouseOut);
     document.querySelector(`.work-frame__indicator`).addEventListener(`click`, this.toggleElement);
@@ -96,24 +92,6 @@ class Work extends Component {
         path: `../assets/data/indicator.json`
       });
 
-<<<<<<< HEAD
-
-  try {
-    var options = {
-      get passive() { // This function will be called when the browser
-                      //     attempts to access the passive property.
-        passiveSupported = true;
-      }
-    };
-
-    window.addEventListener("test", options, options);
-    window.removeEventListener("test", options, options);
-  } catch(err) {
-    passiveSupported = false;
-  }
-
-=======
->>>>>>> feature/rework
     document.querySelector(`.name`).style.color = '#3B3B3B';
     document.addEventListener(`wheel`, this.scrollEvent, passiveSupported ? { passive: true } : false);
     document.addEventListener(`mousewheel`, this.scrollEvent, passiveSupported ? { passive: true } : false);
