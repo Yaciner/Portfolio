@@ -92,41 +92,27 @@ class Bol
 
   draw()
   {
-    //geen dir=mouse want vanaf je dir veranderd van coordinaten dan wordt je mouse ook aangepast waardoor het niet meer werkt
-    //const dir = Vector.sub(mouse, this.location);
-    // const dir = mouse.clone();
-    // dir.sub(this.location);
-    //dir.normalize().mult(Math.random());
-  //  this.acceleration = dir;
-    //this.acceleration.x = Math.random() * 20 - 20;
-    //this.acceleration.y = Math.random() * 20 - 20;
     this.acceleration = Vector.sub(mouse, this.location).normalize().mult(Math.random());
     this.velocity.add(this.acceleration).limit(5);
-    //this.velocity.limit(5);
-    //console.log(this.velocity);
     this.location.add(this.velocity);
     if(this.location.x > canvas.width)
     {
-      //this.velocity.x = -Math.abs(this.velocity.x);
       this.location.x = 0;
     }
 
     if(this.location.x < 0)
     {
-        //this.velocity.x = Math.abs(this.velocity.x);
-        this.location.x = canvas.width;
+      this.location.x = canvas.width;
     }
 
     if(this.location.y > canvas.height)
     {
-        //this.velocity.y = -Math.abs(this.velocity.y) ;
-        this.location.y = 0;
+      this.location.y = 0;
     }
 
     if(this.location.y < 0)
     {
-        //this.velocity.y = Math.abs(this.velocity.y);
-        this.location.y = canvas.height;
+      this.location.y = canvas.height;
     }
 
     ctx.beginPath();
@@ -152,8 +138,6 @@ class Bol
     }
     mouse = new Vector(canvas.width / 2, canvas.height / 2);
     canvas.addEventListener(`mousemove`, event => mousemoveHandler(event));
-
-
     draw();
   };
 

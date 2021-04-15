@@ -7,7 +7,7 @@ export default (elName, attr, container) => {
     $el.setAttribute(key, attr[key]);
   }
 
-  if(container) container.appendChild($el);//als er een container is meegegeven mag je hem er in steken
+  if(container) container.appendChild($el);
 
   return $el;
 

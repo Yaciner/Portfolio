@@ -3,18 +3,8 @@ import { Link } from 'react-router-dom';
 import {workPage} from '../../lib/animateElements';
 import bodymovin from 'lottie-web';
 import Header from '../Header';
-// import Hammer from 'hammerjs';
-// import Velocity from 'velocity-animate';
-// import 'velocity-animate/velocity.ui';
-// import Mouse from '../../lib/mouse';
-// let scrollPos = 0;
 let supportsWheel = !1;
-// let animEnCours = !1
 let delta = 0;
-// let current = 0;
-// let sens = !0;
-// let quotient = -1;
-// let navigationActive = false;
 let timeOut = null;
 let clickState = 0;
 
@@ -58,7 +48,6 @@ class Work extends Component {
     }
 
     else {
-      // code snippet 2
       clickState = 0;
       document.querySelector('.menu-overlay').classList.remove('open');
       document.querySelector('.name').style.color = 'black';
@@ -72,11 +61,9 @@ class Work extends Component {
   }
 
   componentDidMount() {
-    // document.querySelector(`.circle-mouse`).style.fill = `black`;
     document.querySelector(`.work-frame__button`).addEventListener(`mouseenter`, this.handleMouseEnter);
     document.querySelector(`.work-frame__button`).addEventListener(`mouseleave`, this.handleMouseOut);
     document.querySelector(`.work-frame__indicator`).addEventListener(`click`, this.toggleElement);
-    // Mouse();
     this.generateLister();
 
     fetch('./assets/data/projectdata.json', {
@@ -152,9 +139,7 @@ class Work extends Component {
 
     if ("wheel" === e.type) supportsWheel = !0;
     else if (supportsWheel) return;
-
     delta = e.deltaY || -e.wheelDelta || e.detail || 1;
-    // e.preventDefault();
     e.stopPropagation();
 
     if (!scrolled) {
@@ -293,8 +278,6 @@ class Work extends Component {
               <div className="work-frame__button">
                 <p className="work-frame__button-p">
                   <Link to={`/workdetail/${this.state.case}`}>Check it out</Link>
-                  {/* <Link to={'/ideas/'+this.props.testvalue }>Create Idea</Link>
-                  {`/request/${_id}`} */}
                 </p>
               </div>
             </section>
@@ -302,7 +285,6 @@ class Work extends Component {
         </main>
       </div>
     );
-    // }
   };
 };
 

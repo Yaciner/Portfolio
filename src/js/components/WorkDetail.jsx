@@ -90,11 +90,6 @@ export default class WorkDetail extends Component {
     }
   }
 
-  buildMouse() {
-    // document.querySelector(`.circle-mouse`).style.fill = `black`;
-    // Mouse();
-  }
-
   render() {
     const { error, project } = this.state;
     const { _id } = this.props;
@@ -241,9 +236,6 @@ export default class WorkDetail extends Component {
           this.thereIsProject(project, _id)
         }
       </main>
-      {
-        project ? this.buildMouse() : null
-      }
       </div>
     );
   }

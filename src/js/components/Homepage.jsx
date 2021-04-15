@@ -1,14 +1,12 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import 'particles.js/particles';
-import Typed from 'typed.js';
 import Header from './Header';
 const particlesJS = window.particlesJS;
 
 class Homepage extends Component {
 
 componentDidMount() {
-  // Mouse();
   document.querySelector(`.page-controls__work_text`).addEventListener(`mouseenter`, this.handleMouseEnter);
   document.querySelector(`.page-controls__work_text`).addEventListener(`mouseleave`, this.handleMouseOut);
   document.querySelector(`.page-controls__about_text`).addEventListener(`mouseenter`, this.handleMouseEnter);
