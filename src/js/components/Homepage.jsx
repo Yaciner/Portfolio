@@ -1,18 +1,12 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-// import Mouse from '../lib/mouse';
-// import Velocity from 'velocity-animate';
-// import 'velocity-animate/velocity.ui';
 import 'particles.js/particles';
-import Typed from 'typed.js';
+import Header from './Header';
 const particlesJS = window.particlesJS;
 
-
-// const Homepage = () => {
 class Homepage extends Component {
 
 componentDidMount() {
-  // Mouse();
   document.querySelector(`.page-controls__work_text`).addEventListener(`mouseenter`, this.handleMouseEnter);
   document.querySelector(`.page-controls__work_text`).addEventListener(`mouseleave`, this.handleMouseOut);
   document.querySelector(`.page-controls__about_text`).addEventListener(`mouseenter`, this.handleMouseEnter);
@@ -41,39 +35,13 @@ isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };
 
-// handleMouseEnter() {
-//   let $circle = document.querySelector(`.circle-mouse`);
-//   Velocity($circle, {marginTop: `30px`} , {loop:  true}, {easing: `ease-out`});
-//   $circle.style.fill = 'black';
-//   $circle.style.stroke = '#3d72a4';
-//   $circle.style.strokeWidth = 3;
-// }
-
-// handleMouseOut() {
-//   let $circle = document.querySelector(`.circle-mouse`);
-//   // let resetvalue = $circle.style.transform.match(/\d+/g).map(Number);
-//   Velocity($circle, `stop`);
-//   $circle.style.fill = 'white';
-//   $circle.style.stroke = 'none';
-//   $circle.style.strokeWidth = `none`;
-//   $circle.style.marginTop = null;
-//   // console.log()
-//   // $circle.style.transform = `translateY(-${resetvalue[0] + '.' + resetvalue[1]}px);`
-// }
 
   render() {
 
     return (
       <div className="home">
       <div><p className="status"></p></div>
-      <div className="particles" id="particles-js"></div>
-      <header>
-        <nav>
-          <div className="name">
-            <span>Yacine.</span>
-          </div>
-        </nav>
-      </header>
+      <Header />
       <main>
         <section className="page-home active" id="page-home">
           <div className="page-controls">

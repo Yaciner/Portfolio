@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import {animateDetail} from '../lib/animateElements';
+import Header from './Header';
 let called = false;
 const mobile = `mobile`;
 
@@ -88,11 +89,6 @@ export default class WorkDetail extends Component {
     }
   }
 
-  buildMouse() {
-    // document.querySelector(`.circle-mouse`).style.fill = `black`;
-    // Mouse();
-  }
-
   render() {
     const { error, project } = this.state;
     const { _id } = this.props;
@@ -102,13 +98,7 @@ export default class WorkDetail extends Component {
     return (
       <div className="detail">
       <div><p className="status"></p></div>
-      <header>
-      <nav>
-        <div className="name">
-          <span><Link to='/'>Yacine.</Link></span>
-        </div>
-      </nav>
-      </header>
+      <Header />
       <main>
         <section className="page-work" id="page-work">
           <section className="page-work__content">
@@ -243,14 +233,6 @@ export default class WorkDetail extends Component {
           this.thereIsProject(project, _id)
         }
       </main>
-      {
-        project ? this.buildMouse() : null
-      }
-      <footer className="social_footer">
-        <a href="https://www.facebook.com/yacine.redjala"><img className="social_icon" src='../assets/svg/fb.svg' alt="fb" /></a>
-        <a href="https://www.linkedin.com/in/yacine-redjala/"><img className="social_icon" src='../assets/svg/linkedin.svg' alt="linked in" /></a>
-        <a href="https://github.com/Yaciner"><img className="social_icon" src='../assets/svg/github.svg' alt="github" /></a>
-      </footer>
       </div>
     );
   }

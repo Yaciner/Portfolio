@@ -4,6 +4,7 @@ import 'velocity-animate/velocity.ui';
 import 'particles.js/particles';
 import {animateAbout} from '../../lib/animateElements';
 import bodymovin from 'lottie-web';
+import Header from '../Header';
 const particlesJS = window.particlesJS;
 
 class About extends Component {
@@ -43,13 +44,7 @@ class About extends Component {
     return (
       <div className="about">
       <div className="particles" id="particles-js"></div>
-      <header>
-        <nav>
-          <div className="name">
-            <span><Link to='/'>Yacine.</Link></span>
-          </div>
-        </nav>
-      </header>
+      <Header />
       <main>
         <section className="page-about">
 

@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import {workPage} from '../../lib/animateElements';
 import bodymovin from 'lottie-web';
+import Header from '../Header';
 let supportsWheel = !1;
 let delta = 0;
-const mobile = `mobile`;
 let timeOut = null;
 let clickState = 0;
 let passiveSupported = false;
@@ -48,7 +48,6 @@ class Work extends Component {
     }
 
     else {
-      // code snippet 2
       clickState = 0;
       document.querySelector('.menu-overlay').classList.remove('open');
       document.querySelector('.name').style.color = 'black';
@@ -61,7 +60,10 @@ class Work extends Component {
   }
 
   componentDidMount() {
+<<<<<<< HEAD
     // console.log(project[this.state.case]);
+=======
+>>>>>>> feature/rework
     document.querySelector(`.work-frame__button`).addEventListener(`mouseenter`, this.handleMouseEnter);
     document.querySelector(`.work-frame__button`).addEventListener(`mouseleave`, this.handleMouseOut);
     document.querySelector(`.work-frame__indicator`).addEventListener(`click`, this.toggleElement);
@@ -94,6 +96,7 @@ class Work extends Component {
         path: `../assets/data/indicator.json`
       });
 
+<<<<<<< HEAD
 
   try {
     var options = {
@@ -109,6 +112,8 @@ class Work extends Component {
     passiveSupported = false;
   }
 
+=======
+>>>>>>> feature/rework
     document.querySelector(`.name`).style.color = '#3B3B3B';
     document.addEventListener(`wheel`, this.scrollEvent, passiveSupported ? { passive: true } : false);
     document.addEventListener(`mousewheel`, this.scrollEvent, passiveSupported ? { passive: true } : false);
@@ -154,9 +159,7 @@ class Work extends Component {
     let { scrolled } = this.state;
     if (`wheel` === e.type) supportsWheel = !0;
     else if (supportsWheel) return;
-
     delta = e.deltaY || -e.wheelDelta || e.detail || 1;
-    // e.preventDefault();
     e.stopPropagation();
 
     if (!scrolled) {
@@ -180,12 +183,7 @@ class Work extends Component {
   }
 
   generateLister() {
-    // let rightFrame = document.querySelector(`.work-frame`).getBoundingClientRect().right;
     window.addEventListener('resize', this.generateLister);
-    // rightFrame = rightFrame;
-    // let value = rightFrame.toString() + 'px';
-    // console.log(value);
-    // document.querySelector(`.work-frame__indicator`).style.left = value;
   }
 
 	checkStatus = (response) => {
@@ -206,13 +204,7 @@ class Work extends Component {
         <div>
           <p className="status"></p>
         </div>
-        <header>
-          <nav>
-            <div className="name">
-              <span><Link to='/'>Yacine.</Link></span>
-            </div>
-          </nav>
-        </header>
+        <Header />
         <main>
         <div className="menu-overlay" >
           <nav className="overlay-menu">
@@ -311,8 +303,6 @@ class Work extends Component {
               <div className="work-frame__button">
                 <p className="work-frame__button-p">
                   <Link to={`/workdetail/${this.state.case}`}>Check it out</Link>
-                  {/* <Link to={'/ideas/'+this.props.testvalue }>Create Idea</Link>
-                  {`/request/${_id}`} */}
                 </p>
               </div>
             </section>
@@ -320,7 +310,6 @@ class Work extends Component {
         </main>
       </div>
     );
-    // }
   };
 };
 
